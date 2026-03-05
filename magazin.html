@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Каталог Sergio Dallini — нательное белье для мужчин, женщин и детей. Итальянское качество и стиль." />
+  <title>Каталог — Sergio Dallini</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Manrope:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/magazin.css" />
+  <link rel="stylesheet" href="css/cart-popup.css" />
+</head>
+
+<body>
+  <!-- ===== HEADER + MOBILE MENU (loaded from component) ===== -->
+
+  <script src="js/header-component.js" data-theme="dark" data-modifier="magazin"></script>
+
+  <main>
+    <!-- ===== BREADCRUMBS ===== -->
+    <div class="breadcrumbs" id="breadcrumbs">
+      <a href="index.html" class="breadcrumbs__link">ГЛАВНАЯ</a>
+      <span class="breadcrumbs__dot"></span>
+      <span class="breadcrumbs__current">КАТАЛОГ</span>
+    </div>
+
+    <!-- ===== CATALOG FILTERS ===== -->
+    <div class="catalog-filters" id="catalog-filters">
+      <div class="catalog-filters__tabs" id="catalog-tabs">
+        <button class="catalog-filters__tab catalog-filters__tab--active" data-filter="all" id="filter-all"
+          onclick="window.location.href = 'magazin.html'">
+          Все
+        </button>
+        <button class="catalog-filters__tab" data-filter="men" id="filter-men"
+          onclick="window.location.href = 'magazin_men.html'">
+          Мужчины
+        </button>
+        <button class="catalog-filters__tab" data-filter="women" id="filter-women"
+          onclick="window.location.href = 'magazin_women.html'">
+          Женщины
+        </button>
+        <button class="catalog-filters__tab" data-filter="kids" id="filter-kids"
+          onclick="window.location.href = 'magazin_child.html'">
+          Дети
+        </button>
+        <button class="catalog-filters__tab" data-filter="looks" id="filter-looks"
+          onclick="window.location.href = 'obrazi.html'">
+          Образы
+        </button>
+      </div>
+      <button class="catalog-filters__filter-btn" id="filter-btn">
+        Фильтры (0)
+      </button>
+    </div>
+
+    <!-- ===== PRODUCT GRID ===== -->
+    <section class="catalog-grid" id="catalog-grid">
+      <!-- Row 1 -->
+      <div class="product-card" id="product-card-1">
+        <a href="magazin_single.html" class="product-card__link">
+          <div class="product-card__image-wrapper">
+            <img src="images/magazin_img1.webp" alt="Товар 1" class="product-card__image" />
+          </div>
+        </a>
+        <button class="btn btn--solid-dark btn--full" id="cart-btn-1">
+          В корзину
+        </button>
+      </div>
+      <div class="product-card" id="product-card-2">
+        <a href="magazin_single.html" class="product-card__link">
+          <div class="product-card__image-wrapper">
+            <img src="images/magazin_img2.webp" alt="Товар 2" class="product-card__image" />
+          </div>
+        </a>
+        <button class="btn btn--solid-dark btn--full" id="cart-btn-2">
+          В корзину
+        </button>
+      </div>
+      <div class="product-card" id="product-card-3">
+        <a href="magazin_single.html" class="product-card__link">
+          <div class="product-card__image-wrapper">
+            <img src="images/magazin_img3.webp" alt="Товар 3" class="product-card__image" />
+          </div>
+        </a>
+        <button class="btn btn--solid-dark btn--full" id="cart-btn-3">
+          В корзину
+        </button>
+      </div>
+      <div class="product-card" id="product-card-4">
+        <a href="magazin_single.html" class="product-card__link">
+          <div class="product-card__image-wrapper">
+            <img src="images/magazin_img4.webp" alt="Товар 4" class="product-card__image" />
+          </div>
+        </a>
+        <button class="btn btn--solid-dark btn--full" id="cart-btn-4">
+          В корзину
+        </button>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="product-card" id="product-card-5">
+        <a href="magazin_single.html" class="product-card__link">
+          <div class="product-card__image-wrapper">
+            <img src="images/magazin_img5.webp" alt="Товар 5" class="product-card__image" />
+          </div>
+        </a>
+        <button class="btn btn--solid-dark btn--full" id="cart-btn-5">
+          В корзину
+        </button>
+      </div>
+      <div class="product-card" id="product-card-6">
+        <a href="magazin_single.html" class="product-card__link">
+          <div class="product-card__image-wrapper">
+            <img src="images/magazin_img6.webp" alt="Товар 6" class="product-card__image" />
+          </div>
+        </a>
+        <button class="btn btn--solid-dark btn--full" id="cart-btn-6">
+          В корзину
+        </button>
+      </div>
+      <div class="product-card" id="product-card-7">
+        <a href="magazin_single.html" class="product-card__link">
+          <div class="product-card__image-wrapper">
+            <img src="images/magazin_img7.webp" alt="Товар 7" class="product-card__image" />
+          </div>
+        </a>
+        <button class="btn btn--solid-dark btn--full" id="cart-btn-7">
+          В корзину
+        </button>
+      </div>
+      <div class="product-card" id="product-card-8">
+        <a href="magazin_single.html" class="product-card__link">
+          <div class="product-card__image-wrapper">
+            <img src="images/magazin_img8.webp" alt="Товар 8" class="product-card__image" />
+          </div>
+        </a>
+        <button class="btn btn--solid-dark btn--full" id="cart-btn-8">
+          В корзину
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== NEWSLETTER (loaded from component) ===== -->
+
+    <script src="js/newsletter-component.js"></script>
+
+    <!-- ===== FILTER POPUP ===== -->
+    <div class="filter-popup" id="filter-popup">
+      <div class="filter-popup__overlay" id="filter-popup-overlay"></div>
+      <div class="filter-popup__content">
+        <div class="filter-popup__header">
+          <h2 class="filter-popup__title">Фильтры</h2>
+          <button class="filter-popup__close" id="filter-popup-close" aria-label="Закрыть фильтры">
+            <img src="svg/filter-close.svg" alt="Закрыть" width="27" height="27" />
+          </button>
+        </div>
+
+        <div class="filter-popup__body">
+          <div class="filter-popup__section">
+            <h3 class="filter-popup__section-title">Сортировать по:</h3>
+            <div class="filter-popup__sort-options">
+              <label class="filter-popup__sort-label">
+                <span class="filter-popup__sort-text">Дате</span>
+                <img src="svg/icon-date.svg" alt="" width="24" height="24"
+                  style="margin-right: auto; margin-left: 8px" />
+                <input type="radio" name="sort" value="date" class="filter-popup__sort-input" checked />
+                <span class="filter-popup__sort-icon"></span>
+              </label>
+              <label class="filter-popup__sort-label">
+                <span class="filter-popup__sort-text">Цене</span>
+                <img src="svg/icon-price.svg" alt="" width="15" height="18"
+                  style="margin-right: auto; margin-left: 8px" />
+                <input type="radio" name="sort" value="price" class="filter-popup__sort-input" />
+                <span class="filter-popup__sort-icon"></span>
+              </label>
+            </div>
+            <div class="filter-popup__sort-links">
+              <button class="filter-popup__sort-link filter-popup__sort-link--active">Сначала новые</button>
+              <button class="filter-popup__sort-link">Сначала старые</button>
+            </div>
+          </div>
+
+          <div class="filter-popup__accordion">
+            <div class="filter-popup__accordion-item filter-popup__accordion-item--open">
+              <button class="filter-popup__accordion-btn" id="color-accordion-btn">
+                Цвет (0)
+                <img src="svg/filter-minus.svg" alt="" width="24" height="24" class="filter-popup__accordion-icon" />
+              </button>
+              <div class="filter-popup__accordion-body" id="color-accordion-body">
+                <label class="filter-popup__color-option">
+                  <input type="checkbox" class="filter-popup__color-input" checked />
+                  <span class="filter-popup__color-circle">
+                    <img src="svg/check-white.svg" alt="" class="filter-popup__color-check" />
+                  </span>
+                  <span class="filter-popup__color-text">Черный</span>
+                </label>
+                <label class="filter-popup__color-option">
+                  <input type="checkbox" class="filter-popup__color-input" />
+                  <span class="filter-popup__color-circle">
+                    <img src="svg/check-white.svg" alt="" class="filter-popup__color-check" />
+                  </span>
+                  <span class="filter-popup__color-text">Цвет 2</span>
+                </label>
+                <label class="filter-popup__color-option">
+                  <input type="checkbox" class="filter-popup__color-input" />
+                  <span class="filter-popup__color-circle">
+                    <img src="svg/check-white.svg" alt="" class="filter-popup__color-check" />
+                  </span>
+                  <span class="filter-popup__color-text">Цвет 3</span>
+                </label>
+                <label class="filter-popup__color-option">
+                  <input type="checkbox" class="filter-popup__color-input" />
+                  <span class="filter-popup__color-circle">
+                    <img src="svg/check-white.svg" alt="" class="filter-popup__color-check" />
+                  </span>
+                  <span class="filter-popup__color-text">Цвет 4</span>
+                </label>
+                <label class="filter-popup__color-option">
+                  <input type="checkbox" class="filter-popup__color-input" />
+                  <span class="filter-popup__color-circle">
+                    <img src="svg/check-white.svg" alt="" class="filter-popup__color-check" />
+                  </span>
+                  <span class="filter-popup__color-text">Цвет 5</span>
+                </label>
+              </div>
+            </div>
+            <div class="filter-popup__accordion-item">
+              <button class="filter-popup__accordion-btn" id="size-accordion-btn">
+                Размер (0)
+                <img src="svg/filter-plus.svg" alt="" width="24" height="24" class="filter-popup__accordion-icon" />
+              </button>
+              <div class="filter-popup__accordion-body" id="size-accordion-body">
+                <div class="filter-popup__size-options">
+                  <label class="filter-popup__size-option">
+                    <input type="checkbox" class="filter-popup__size-input" checked />
+                    <span class="filter-popup__size-box">XS</span>
+                  </label>
+                  <label class="filter-popup__size-option">
+                    <input type="checkbox" class="filter-popup__size-input" />
+                    <span class="filter-popup__size-box">S</span>
+                  </label>
+                  <label class="filter-popup__size-option">
+                    <input type="checkbox" class="filter-popup__size-input" />
+                    <span class="filter-popup__size-box">M</span>
+                  </label>
+                  <label class="filter-popup__size-option">
+                    <input type="checkbox" class="filter-popup__size-input" />
+                    <span class="filter-popup__size-box">L</span>
+                  </label>
+                  <label class="filter-popup__size-option">
+                    <input type="checkbox" class="filter-popup__size-input" />
+                    <span class="filter-popup__size-box">XL</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-popup__accordion-item">
+              <button class="filter-popup__accordion-btn" id="material-accordion-btn">
+                Материал (0)
+                <img src="svg/filter-plus.svg" alt="" width="24" height="24" class="filter-popup__accordion-icon" />
+              </button>
+              <div class="filter-popup__accordion-body" id="material-accordion-body">
+                <label class="filter-popup__material-option">
+                  <input type="radio" name="material" class="filter-popup__material-input" />
+                  <span class="filter-popup__material-radio"></span>
+                  <span class="filter-popup__material-text">Материал 1</span>
+                </label>
+                <label class="filter-popup__material-option">
+                  <input type="radio" name="material" class="filter-popup__material-input" />
+                  <span class="filter-popup__material-radio"></span>
+                  <span class="filter-popup__material-text">Материал 2</span>
+                </label>
+                <label class="filter-popup__material-option">
+                  <input type="radio" name="material" class="filter-popup__material-input" />
+                  <span class="filter-popup__material-radio"></span>
+                  <span class="filter-popup__material-text">Материал 3</span>
+                </label>
+                <label class="filter-popup__material-option">
+                  <input type="radio" name="material" class="filter-popup__material-input" checked />
+                  <span class="filter-popup__material-radio"></span>
+                  <span class="filter-popup__material-text">Материал 4</span>
+                </label>
+              </div>
+            </div>
+            <div class="filter-popup__accordion-item">
+              <button class="filter-popup__accordion-btn" id="model-accordion-btn">
+                Модель (0)
+                <img src="svg/filter-plus.svg" alt="" width="24" height="24" class="filter-popup__accordion-icon" />
+              </button>
+              <div class="filter-popup__accordion-body" id="model-accordion-body">
+                <label class="filter-popup__material-option">
+                  <input type="radio" name="model" class="filter-popup__material-input" />
+                  <span class="filter-popup__material-radio"></span>
+                  <span class="filter-popup__material-text">Модель 1</span>
+                </label>
+                <label class="filter-popup__material-option">
+                  <input type="radio" name="model" class="filter-popup__material-input" />
+                  <span class="filter-popup__material-radio"></span>
+                  <span class="filter-popup__material-text">Модель 2</span>
+                </label>
+                <label class="filter-popup__material-option">
+                  <input type="radio" name="model" class="filter-popup__material-input" />
+                  <span class="filter-popup__material-radio"></span>
+                  <span class="filter-popup__material-text">Модель 3</span>
+                </label>
+                <label class="filter-popup__material-option">
+                  <input type="radio" name="model" class="filter-popup__material-input" />
+                  <span class="filter-popup__material-radio"></span>
+                  <span class="filter-popup__material-text">Модель 4</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-popup__footer">
+          <button class="filter-popup__btn filter-popup__btn--clear" id="filter-clear">
+            Очистить
+          </button>
+          <button class="filter-popup__btn filter-popup__btn--apply" id="filter-apply">
+            Показать товары (00)
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER (loaded from component) ===== -->
+  <script src="js/footer-component.js"></script>
+
+  <script src="js/header.js"></script>
+  <script src="js/newsletter.js"></script>
+  <script>
+    // Catalog filter tabs
+    const tabs = document.querySelectorAll(".catalog-filters__tab");
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((t) =>
+          t.classList.remove("catalog-filters__tab--active"),
+        );
+        tab.classList.add("catalog-filters__tab--active");
+      });
+    });
+
+    // Filter Popup logic
+    const filterBtn = document.getElementById("filter-btn");
+    const filterPopup = document.getElementById("filter-popup");
+    const filterPopupClose = document.getElementById("filter-popup-close");
+    const filterPopupOverlay = document.getElementById(
+      "filter-popup-overlay",
+    );
+    const filterApply = document.getElementById("filter-apply");
+    const filterClear = document.getElementById("filter-clear");
+
+    function openFilterPopup() {
+      filterPopup.classList.add("filter-popup--open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeFilterPopup() {
+      filterPopup.classList.remove("filter-popup--open");
+      document.body.style.overflow = "";
+    }
+
+    if (filterBtn && filterPopup) {
+      filterBtn.addEventListener("click", openFilterPopup);
+      filterPopupClose.addEventListener("click", closeFilterPopup);
+      filterPopupOverlay.addEventListener("click", closeFilterPopup);
+      if (filterApply)
+        filterApply.addEventListener("click", closeFilterPopup);
+    }
+
+    // Clear all filters
+    if (filterClear) {
+      filterClear.addEventListener("click", () => {
+        const popup = document.getElementById("filter-popup");
+        popup.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+        popup.querySelectorAll('input[type="radio"]').forEach(rb => rb.checked = false);
+        const dateRadio = popup.querySelector('input[name="sort"][value="date"]');
+        if (dateRadio) dateRadio.checked = true;
+        popup.querySelectorAll(".filter-popup__sort-link").forEach((link, i) => {
+          link.classList.toggle("filter-popup__sort-link--active", i === 0);
+        });
+      });
+    }
+
+    // Accordion toggle helper
+    function setupAccordionToggle(btnId) {
+      const btn = document.getElementById(btnId);
+      if (btn) {
+        btn.addEventListener("click", () => {
+          const item = btn.closest(".filter-popup__accordion-item");
+          const icon = btn.querySelector(".filter-popup__accordion-icon");
+          const isOpen = item.classList.toggle("filter-popup__accordion-item--open");
+          icon.src = isOpen ? "svg/filter-minus.svg" : "svg/filter-plus.svg";
+        });
+      }
+    }
+    setupAccordionToggle("color-accordion-btn");
+    setupAccordionToggle("size-accordion-btn");
+    setupAccordionToggle("material-accordion-btn");
+    setupAccordionToggle("model-accordion-btn");
+
+    // Product card hover effect
+    document.querySelectorAll(".product-card").forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        card.classList.add("product-card--hover");
+      });
+      card.addEventListener("mouseleave", () => {
+        card.classList.remove("product-card--hover");
+      });
+    });
+  </script>
+  <script src="js/cart-popup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Образ Sergio Dallini — готовый стильный комплект нательного белья. Детали, которые тебя раскрывают." />
+    <title>Образ — Sergio Dallini</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Manrope:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/magazin.css" />
+    <link rel="stylesheet" href="css/obrazi_single.css" />
+    <link rel="stylesheet" href="css/cart-popup.css" />
+</head>
+
+<body>
+    <!-- ===== HEADER + MOBILE MENU (loaded from component) ===== -->
+
+    <script src="js/header-component.js" data-theme="dark" data-modifier="magazin"></script>
+
+    <main>
+        <!-- ===== BREADCRUMBS ===== -->
+        <div class="breadcrumbs" id="breadcrumbs">
+            <a href="index.html" class="breadcrumbs__link">ГЛАВНАЯ</a>
+            <span class="breadcrumbs__dot"></span>
+            <a href="magazin.html" class="breadcrumbs__link">КАТАЛОГ</a>
+            <span class="breadcrumbs__dot"></span>
+            <a href="obrazi.html" class="breadcrumbs__link">ОБРАЗЫ</a>
+            <span class="breadcrumbs__dot breadcrumbs__dot--dark"></span>
+            <span class="breadcrumbs__current breadcrumbs__current--dark">НАЗВАНИЕ ОБРАЗА</span>
+        </div>
+
+        <!-- ===== CATALOG FILTERS (mobile only) ===== -->
+        <div class="look-single-filters" id="look-single-filters">
+            <div class="catalog-filters__tabs">
+                <button class="catalog-filters__tab" onclick="window.location.href='magazin.html'">Все</button>
+                <button class="catalog-filters__tab" onclick="window.location.href='magazin_men.html'">Мужчины</button>
+                <button class="catalog-filters__tab"
+                    onclick="window.location.href='magazin_women.html'">Женщины</button>
+                <button class="catalog-filters__tab" onclick="window.location.href='magazin_child.html'">Дети</button>
+                <button class="catalog-filters__tab catalog-filters__tab--active">Образы</button>
+            </div>
+        </div>
+
+        <!-- ===== LOOK DETAIL SECTION ===== -->
+        <section class="look-detail" id="look-detail">
+            <!-- Left: Image Gallery -->
+            <div class="look-detail__gallery" id="look-gallery">
+                <!-- Thumbnail strip -->
+                <div class="look-detail__thumbs" id="look-thumbs">
+                    <button class="look-detail__thumb look-detail__thumb--active" data-index="0">
+                        <img src="images/obraz_img1.webp" alt="Образ вид 1" />
+                    </button>
+                    <button class="look-detail__thumb" data-index="1">
+                        <img src="images/obraz_img2.webp" alt="Образ вид 2" />
+                    </button>
+                    <button class="look-detail__thumb" data-index="2">
+                        <img src="images/obraz_img3.webp" alt="Образ вид 3" />
+                    </button>
+                    <button class="look-detail__thumb" data-index="3">
+                        <img src="images/obraz_img4.webp" alt="Образ вид 4" />
+                    </button>
+                </div>
+                <!-- Main image viewer -->
+                <div class="look-detail__main-image" id="look-main-image">
+                    <img src="images/obraz_img5.webp" alt="Образ — главное фото" class="look-detail__image"
+                        id="look-hero-img" />
+                    <!-- Slider arrows -->
+                    <button class="look-detail__arrow look-detail__arrow--prev" id="look-prev"
+                        aria-label="Предыдущее фото">
+                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.5 8H0.5M0.5 8L8 0.5M0.5 8L8 15.5" stroke="#FCFCFC" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button class="look-detail__arrow look-detail__arrow--next" id="look-next"
+                        aria-label="Следующее фото">
+                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.5 8H19.5M19.5 8L12 0.5M19.5 8L12 15.5" stroke="#FCFCFC" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <!-- Slider dots -->
+                    <div class="look-detail__dots" id="look-dots">
+                        <span class="look-detail__dot look-detail__dot--active" data-index="0"></span>
+                        <span class="look-detail__dot" data-index="1"></span>
+                        <span class="look-detail__dot" data-index="2"></span>
+                        <span class="look-detail__dot" data-index="3"></span>
+                        <span class="look-detail__dot" data-index="4"></span>
+                        <span class="look-detail__dot" data-index="5"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product items columns -->
+            <div class="look-detail__products" id="look-products">
+                <!-- Column 1 -->
+                <div class="look-detail__products-col">
+                    <!-- Product 1 -->
+                    <div class="look-product" id="look-product-1">
+                        <div class="look-product__row">
+                            <div class="look-product__thumb">
+                                <img src="images/obraz_img6.webp" alt="Товар" />
+                            </div>
+                            <div class="look-product__info">
+                                <div class="look-product__name">НАЗВАНИЕ</div>
+                                <div class="look-product__material">Материал</div>
+                                <div class="look-product__size">Размер</div>
+                            </div>
+                            <div class="look-product__price">000₽</div>
+                        </div>
+                        <button class="btn btn--solid-dark btn--full look-product__cart-btn">
+                            В корзину
+                        </button>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="look-product" id="look-product-2">
+                        <div class="look-product__row">
+                            <div class="look-product__thumb">
+                                <img src="images/obraz_img7.webp" alt="Товар" />
+                            </div>
+                            <div class="look-product__info">
+                                <div class="look-product__name">НАЗВАНИЕ</div>
+                                <div class="look-product__material">Материал</div>
+                                <div class="look-product__size">Размер</div>
+                            </div>
+                            <div class="look-product__price">000₽</div>
+                        </div>
+                        <button class="btn btn--solid-dark btn--full look-product__cart-btn">
+                            В корзину
+                        </button>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="look-product" id="look-product-3">
+                        <div class="look-product__row">
+                            <div class="look-product__thumb">
+                                <img src="images/obraz_img8.webp" alt="Товар" />
+                            </div>
+                            <div class="look-product__info">
+                                <div class="look-product__name">НАЗВАНИЕ</div>
+                                <div class="look-product__material">Материал</div>
+                                <div class="look-product__size">Размер</div>
+                            </div>
+                            <div class="look-product__price">000₽</div>
+                        </div>
+                        <button class="btn btn--solid-dark btn--full look-product__cart-btn">
+                            В корзину
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="look-detail__products-col">
+                    <!-- Product 4 -->
+                    <div class="look-product" id="look-product-4">
+                        <div class="look-product__row">
+                            <div class="look-product__thumb">
+                                <img src="images/obraz_img9.webp" alt="Товар" />
+                            </div>
+                            <div class="look-product__info">
+                                <div class="look-product__name">НАЗВАНИЕ</div>
+                                <div class="look-product__material">Материал</div>
+                                <div class="look-product__size">Размер</div>
+                            </div>
+                            <div class="look-product__price">000₽</div>
+                        </div>
+                        <button class="btn btn--solid-dark btn--full look-product__cart-btn">
+                            В корзину
+                        </button>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="look-product" id="look-product-5">
+                        <div class="look-product__row">
+                            <div class="look-product__thumb">
+                                <img src="images/obraz_img10.webp" alt="Товар" />
+                            </div>
+                            <div class="look-product__info">
+                                <div class="look-product__name">НАЗВАНИЕ</div>
+                                <div class="look-product__material">Материал</div>
+                                <div class="look-product__size">Размер</div>
+                            </div>
+                            <div class="look-product__price">000₽</div>
+                        </div>
+                        <button class="btn btn--solid-dark btn--full look-product__cart-btn">
+                            В корзину
+                        </button>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="look-product" id="look-product-6">
+                        <div class="look-product__row">
+                            <div class="look-product__thumb">
+                                <img src="images/obraz_img11.webp" alt="Товар" />
+                            </div>
+                            <div class="look-product__info">
+                                <div class="look-product__name">НАЗВАНИЕ</div>
+                                <div class="look-product__material">Материал</div>
+                                <div class="look-product__size">Размер</div>
+                            </div>
+                            <div class="look-product__price">000₽</div>
+                        </div>
+                        <button class="btn btn--solid-dark btn--full look-product__cart-btn">
+                            В корзину
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== RECOMMENDED LOOKS ===== -->
+        <section class="recommended-looks" id="recommended-looks">
+            <h2 class="recommended-looks__title">Вам также могут понравиться эти образы</h2>
+            <div class="recommended-looks__grid">
+                <!-- Look 1 -->
+                <div class="recommended-look-card" id="rec-look-1">
+                    <div class="recommended-look-card__image-wrapper">
+                        <img src="images/obraz_img14.webp" alt="Рекомендованный образ 1"
+                            class="recommended-look-card__image" />
+                    </div>
+                    <a href="#" class="btn btn--solid-dark btn--full recommended-look-card__btn">
+                        <span>Подробнее</span>
+                        <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
+                    </a>
+                </div>
+
+                <!-- Look 2 -->
+                <div class="recommended-look-card" id="rec-look-2">
+                    <div class="recommended-look-card__image-wrapper">
+                        <img src="images/obraz_img15.webp" alt="Рекомендованный образ 2"
+                            class="recommended-look-card__image" />
+                    </div>
+                    <a href="#" class="btn btn--solid-dark btn--full recommended-look-card__btn">
+                        <span>Подробнее</span>
+                        <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
+                    </a>
+                </div>
+
+                <!-- Look 3 -->
+                <div class="recommended-look-card" id="rec-look-3">
+                    <div class="recommended-look-card__image-wrapper">
+                        <img src="images/obraz_img16.webp" alt="Рекомендованный образ 3"
+                            class="recommended-look-card__image" />
+                    </div>
+                    <a href="#" class="btn btn--solid-dark btn--full recommended-look-card__btn">
+                        <span>Подробнее</span>
+                        <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
+                    </a>
+                </div>
+
+                <!-- Look 4 -->
+                <div class="recommended-look-card" id="rec-look-4">
+                    <div class="recommended-look-card__image-wrapper">
+                        <img src="images/obraz_img17.webp" alt="Рекомендованный образ 4"
+                            class="recommended-look-card__image" />
+                    </div>
+                    <a href="#" class="btn btn--solid-dark btn--full recommended-look-card__btn">
+                        <span>Подробнее</span>
+                        <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== NEWSLETTER (loaded from component) ===== -->
+
+        <script src="js/newsletter-component.js"></script>
+    </main>
+
+    <!-- ===== FOOTER (loaded from component) ===== -->
+    <script src="js/footer-component.js"></script>
+
+    <script src="js/header.js"></script>
+    <script src="js/newsletter.js"></script>
+    <script>
+        // ===== Image gallery slider =====
+        const galleryImages = [
+            "images/obraz_img5.webp",
+            "images/obraz_img1.webp",
+            "images/obraz_img2.webp",
+            "images/obraz_img3.webp",
+            "images/obraz_img4.webp",
+            "images/obraz_img20.webp"
+        ];
+        let currentSlide = 0;
+        const heroImg = document.getElementById("look-hero-img");
+        const dots = document.querySelectorAll(".look-detail__dot");
+        const thumbs = document.querySelectorAll(".look-detail__thumb");
+        const prevBtn = document.getElementById("look-prev");
+        const nextBtn = document.getElementById("look-next");
+
+        function updateSlider(index) {
+            currentSlide = index;
+            heroImg.src = galleryImages[index];
+
+            // Update dots
+            dots.forEach((dot, i) => {
+                dot.classList.toggle("look-detail__dot--active", i === index);
+            });
+
+            // Update thumbnails (first 4 match indices 0-3 → gallery indices 0-3,
+            // but the first thumb corresponds to gallery image at index 1, etc.)
+            // Let's map: thumb 0→gallery 1, thumb 1→gallery 2, etc.
+            // Actually, thumbnails show the first 4 sub-images and main is separately controlled.
+            // Simply highlight if the index maps to a thumb
+            thumbs.forEach((thumb, i) => {
+                // Thumb i corresponds to gallery image i+1 (since index 0 is the main hero default)
+                // Actually let's just map thumbnails to the gallery items directly
+                thumb.classList.toggle("look-detail__thumb--active", i + 1 === index || (i === 0 && index === 0));
+            });
+        }
+
+        prevBtn.addEventListener("click", () => {
+            const newIndex = currentSlide === 0 ? galleryImages.length - 1 : currentSlide - 1;
+            updateSlider(newIndex);
+        });
+
+        nextBtn.addEventListener("click", () => {
+            const newIndex = currentSlide === galleryImages.length - 1 ? 0 : currentSlide + 1;
+            updateSlider(newIndex);
+        });
+
+        dots.forEach((dot) => {
+            dot.addEventListener("click", () => {
+                updateSlider(parseInt(dot.dataset.index));
+            });
+        });
+
+        thumbs.forEach((thumb) => {
+            thumb.addEventListener("click", () => {
+                const idx = parseInt(thumb.dataset.index);
+                heroImg.src = thumb.querySelector("img").src;
+                currentSlide = idx;
+                thumbs.forEach(t => t.classList.remove("look-detail__thumb--active"));
+                thumb.classList.add("look-detail__thumb--active");
+                dots.forEach((d, i) => d.classList.toggle("look-detail__dot--active", i === idx));
+            });
+        });
+
+        // ===== Touch swipe support for main image =====
+        const mainImageEl = document.getElementById("look-main-image");
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchEndX = 0;
+        let isSwiping = false;
+
+        mainImageEl.addEventListener("touchstart", (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+            isSwiping = false;
+        }, { passive: true });
+
+        mainImageEl.addEventListener("touchmove", (e) => {
+            const diffX = Math.abs(e.changedTouches[0].screenX - touchStartX);
+            const diffY = Math.abs(e.changedTouches[0].screenY - touchStartY);
+            // If horizontal movement is dominant, prevent vertical scroll
+            if (diffX > diffY && diffX > 10) {
+                isSwiping = true;
+                e.preventDefault();
+            }
+        }, { passive: false });
+
+        mainImageEl.addEventListener("touchend", (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const swipeDistance = touchStartX - touchEndX;
+            const threshold = 50;
+
+            if (Math.abs(swipeDistance) > threshold) {
+                if (swipeDistance > 0) {
+                    // Swiped left → next slide
+                    const newIndex = currentSlide === galleryImages.length - 1 ? 0 : currentSlide + 1;
+                    updateSlider(newIndex);
+                } else {
+                    // Swiped right → previous slide
+                    const newIndex = currentSlide === 0 ? galleryImages.length - 1 : currentSlide - 1;
+                    updateSlider(newIndex);
+                }
+            }
+        }, { passive: true });
+    </script>
+    <script src="js/cart-popup.js"></script>
+</body>
+
+</html>

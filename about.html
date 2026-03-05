@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="О бренде Sergio Dallini — итальянский бренд нательного белья. Дорогой комфорт, стиль и качество.">
+    <title>О бренде — Sergio Dallini</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Manrope:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER + MOBILE MENU (loaded from component) ===== -->
+    <script src="js/header-component.js" data-theme="dark" data-modifier="about"></script>
+
+    <main>
+
+        <!-- ===== HERO: БРЕНД О ТЕБЕ ===== -->
+        <section class="about-hero" id="about-hero">
+            <h1 class="about-hero__title">Бренд о тебе</h1>
+
+            <div class="about-hero__layout">
+                <!-- Left large image -->
+                <div class="about-hero__image-left">
+                    <img src="images/about_brend_img1.webp" alt="Sergio Dallini — бренд о тебе">
+                </div>
+
+                <!-- Right content area -->
+                <div class="about-hero__right">
+                    <div class="about-hero__text-block">
+                        <h2 class="about-hero__subtitle">Стиль с первого слоя</h2>
+                        <p class="about-hero__description">В ассортимент входят коллекции слипов, боксеров, шорт, а
+                            также футболки, майки и носочно-чулочная продукция. Коллекции Sergio Dallini для тех, кто
+                            хочет получать удовольствие от стильного и удобного белья.</p>
+                    </div>
+                    <div class="about-hero__image-right">
+                        <img src="images/about_brend_img2.webp" alt="Коллекция Sergio Dallini">
+                        <div class="about-hero__image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PRODUCTION SLIDER (Scroll-Driven) ===== -->
+        <section class="production" id="production">
+            <div class="production__sticky">
+                <!-- Image row: number | image | number -->
+                <div class="production__image-row">
+                    <div class="production__counter production__counter--left">
+                        <span class="production__counter-num" id="prod-counter-num">01</span>
+                    </div>
+
+                    <div class="production__image-area">
+                        <div class="production__slide production__slide--active" data-slide="0">
+                            <picture>
+                                <source media="(max-width: 576px)" srcset="images/about_brend_mobile_img3.webp">
+                                <img src="images/about_brend_img3.webp" alt="Хлопковые поля">
+                            </picture>
+                        </div>
+                        <div class="production__slide" data-slide="1">
+                            <img src="images/about_brend_slider2.webp" alt="Подготовка хлопка">
+                        </div>
+                        <div class="production__slide" data-slide="2">
+                            <img src="images/about_brend_slider3.webp" alt="Производство пряжи">
+                        </div>
+                        <div class="production__slide" data-slide="3">
+                            <img src="images/about_brend_slider4.webp" alt="Дизайн и раскрой">
+                        </div>
+                        <div class="production__slide" data-slide="4">
+                            <img src="images/about_brend_slider5.webp" alt="Примерка и продажа">
+                        </div>
+                    </div>
+
+                    <div class="production__counter production__counter--right">
+                        <span class="production__counter-total">05</span>
+                    </div>
+                </div>
+
+                <!-- Description text -->
+                <div class="production__text-area">
+                    <p class="production__text production__text--active" data-text="0">
+                        Всё начинается с источника — хлопковых полей, где создаётся основа будущего изделия. Сырьё
+                        проходит отбор и очистку, сохраняя природную мягкость и текстуру.
+                    </p>
+                    <p class="production__text" data-text="1">
+                        После сбора, хлопок подготавливают, обрабатывают и расчесывают. Из первоклассного сырья делают
+                        пряжу - мягкую, но прочную, на века.
+                    </p>
+                    <p class="production__text" data-text="2">
+                        После сбора, хлопок подготавливают, обрабатывают и расчесывают. Из первоклассного сырья делают
+                        пряжу - мягкую, но прочную, на века.
+                    </p>
+                    <p class="production__text" data-text="3">
+                        Ножницы, выкройки, работа дизайнера. Наша ткань, уже покрашенная и подготовленная, попадает на
+                        стол модельера и раскройщика. По лекалам из солнечной Италии ткань режут, придают ей форму
+                        будущего изделия и сшивают. Почти все готово!
+                    </p>
+                    <p class="production__text" data-text="4">
+                        Этап примерки и продажи. Новосшитое белье отправляют не в цех, а сразу же на съемочную площадку
+                        и оценку! Если белье проходит по всем стандартам, мы снимаем его на наших профессиональных
+                        моделях в светлых студиях, чтобы через день его уже смогли увидеть вы — и добавить в свою
+                        корзину!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== BRAND VALUES ===== -->
+        <section class="values" id="values">
+            <div class="values__bg">
+                <h2 class="values__title">Ценности бренда</h2>
+
+                <div class="values__carousel" id="values-carousel">
+                    <div class="values__track" id="values-track">
+                        <!-- Value 1 -->
+                        <div class="values__item">
+                            <div class="values__item-label">
+                                <span class="values__item-num">01</span>
+                                <span class="values__item-name">Дорогой комфорт</span>
+                            </div>
+                            <div class="values__item-image">
+                                <picture>
+                                    <source media="(max-width: 576px)" srcset="images/about_brend_img5.webp">
+                                    <img src="images/about_brend_img5.webp" alt="Дорогой комфорт">
+                                </picture>
+                            </div>
+                        </div>
+
+                        <!-- Value 2 -->
+                        <div class="values__item">
+                            <div class="values__item-label">
+                                <span class="values__item-num">02</span>
+                                <span class="values__item-name">Стиль на каждый день</span>
+                            </div>
+                            <div class="values__item-image">
+                                <picture>
+                                    <source media="(max-width: 576px)" srcset="images/about_brend_mobile_img5.webp">
+                                    <img src="images/about_brend_img6.webp" alt="Стиль на каждый день">
+                                </picture>
+                            </div>
+                        </div>
+
+                        <!-- Value 3 -->
+                        <div class="values__item">
+                            <div class="values__item-label">
+                                <span class="values__item-num">03</span>
+                                <span class="values__item-name">Забота о теле</span>
+                            </div>
+                            <div class="values__item-image">
+                                <picture>
+                                    <source media="(max-width: 576px)" srcset="images/about_brend_mobile_img6.webp">
+                                    <img src="images/about_brend_img1.webp" alt="Забота о теле">
+                                </picture>
+                            </div>
+                        </div>
+
+                        <!-- Value 4 -->
+                        <div class="values__item">
+                            <div class="values__item-label">
+                                <span class="values__item-num">04</span>
+                                <span class="values__item-name">Твоя личная поддержка</span>
+                            </div>
+                            <div class="values__item-image">
+                                <picture>
+                                    <source media="(max-width: 576px)" srcset="images/about_brend_mobile_img7.webp">
+                                    <img src="images/about_brend_img7.webp" alt="Твоя личная поддержка">
+                                </picture>
+                            </div>
+                            <div class="values__item-image values__item-image--small">
+                                <picture>
+                                    <source media="(max-width: 576px)" srcset="images/about_brend_mobile_img8.webp">
+                                    <img src="images/about_brend_img2.webp" alt="Твоя личная поддержка">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== AWARDS ===== -->
+        <section class="awards" id="awards">
+            <div class="awards__intro">
+                <p class="awards__intro-text">Наш путь отмечен профессиональным признанием. Каждая награда —
+                    подтверждение качества, в которое мы верим</p>
+            </div>
+
+            <div class="awards__list">
+                <!-- Award 1 -->
+                <div class="awards__item">
+                    <div class="awards__item-header">
+                        <span class="awards__year">'17</span>
+                        <span class="awards__name">Lingerie Show-Forum</span>
+                    </div>
+                    <p class="awards__desc">Диплом за участие в международной выставке нижнего белья, купальников,
+                        домашней одежды и чулочных изделий Lingerie Show-Forum 27 августа - 4 сентября 2017 года</p>
+                    <div class="awards__hover-photo">
+                        <img src="images/hover_photo.webp" alt="Award photo">
+                    </div>
+                </div>
+
+                <!-- Award 2 -->
+                <div class="awards__item">
+                    <div class="awards__item-header">
+                        <span class="awards__year">'18</span>
+                        <span class="awards__name">Lingerie Show-Forum</span>
+                    </div>
+                    <p class="awards__desc">Диплом за участие в международной выставке нижнего белья, купальников,
+                        домашней одежды и чулочных изделий Lingerie Show-Forum 15 - 23 февраля 2018 года</p>
+                    <div class="awards__hover-photo">
+                        <img src="images/hover_photo.webp" alt="Award photo">
+                    </div>
+                </div>
+
+                <!-- Award 3 -->
+                <div class="awards__item">
+                    <div class="awards__item-header">
+                        <span class="awards__year">'18</span>
+                        <span class="awards__name">Lingerie Show-Forum</span>
+                    </div>
+                    <p class="awards__desc">Диплом 51й федеральной оптовой ярмарки товаров и оборудования текстильной и
+                        легкой промышленности textil legprom. Награждается ООО "Дутекс" за предоставление
+                        высококачественной продукции</p>
+                    <div class="awards__hover-photo">
+                        <img src="images/hover_photo.webp" alt="Award photo">
+                    </div>
+                </div>
+
+                <!-- Award 4 -->
+                <div class="awards__item awards__item--inline">
+                    <div class="awards__item-header">
+                        <span class="awards__year">'21</span>
+                        <span class="awards__name">textil legprom</span>
+                    </div>
+                    <p class="awards__desc">Диплом экспонента в международной выставке нижнего белья, купальников,
+                        домашней одежды и чулочных изделий Lingerie Show-Forum 29 августа - 3 сентября 2021 года</p>
+                    <div class="awards__hover-photo">
+                        <img src="images/hover_photo.webp" alt="Award photo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== NEWSLETTER (loaded from component) ===== -->
+
+        <script src="js/newsletter-component.js"></script>
+
+    </main>
+
+    <!-- ===== FOOTER (loaded from component) ===== -->
+    <script src="js/footer-component.js"></script>
+
+    <script src="js/header.js"></script>
+    <script src="js/newsletter.js"></script>
+    <script>
+        // ===== Production Slider (Scroll-Driven Clip-Path Reveal) =====
+        const productionSection = document.getElementById('production');
+        const prodSlides = document.querySelectorAll('.production__slide');
+        const prodTexts = document.querySelectorAll('.production__text');
+        const prodCounterNum = document.getElementById('prod-counter-num');
+        const totalSlides = prodSlides.length;
+        let currentCounterSlide = 0;
+
+        // Set z-index stacking: later slides on top
+        prodSlides.forEach((slide, i) => {
+            slide.style.zIndex = i + 1;
+        });
+
+        // First slide starts fully revealed
+        prodSlides[0].style.clipPath = 'inset(0 0% 0 0%)';
+
+        function updateCounter(index) {
+            if (index === currentCounterSlide) return;
+            currentCounterSlide = index;
+
+            // Animate counter number
+            prodCounterNum.classList.add('production__counter-num--exit');
+            setTimeout(() => {
+                prodCounterNum.textContent = String(index + 1).padStart(2, '0');
+                prodCounterNum.classList.remove('production__counter-num--exit');
+                prodCounterNum.classList.add('production__counter-num--enter');
+                setTimeout(() => {
+                    prodCounterNum.classList.remove('production__counter-num--enter');
+                }, 350);
+            }, 200);
+
+            // Update text
+            prodTexts.forEach((txt, i) => {
+                if (i === index) {
+                    txt.classList.add('production__text--active');
+                } else {
+                    txt.classList.remove('production__text--active');
+                }
+            });
+        }
+
+        // Scroll handler: continuous clip-path animation
+        function handleProductionScroll() {
+            const rect = productionSection.getBoundingClientRect();
+            const sectionHeight = productionSection.offsetHeight;
+            const viewportHeight = window.innerHeight;
+
+            const scrolledIntoSection = -rect.top;
+            const scrollableRange = sectionHeight - viewportHeight;
+
+            if (scrollableRange <= 0) return;
+
+            // Overall progress 0..1
+            const progress = Math.max(0, Math.min(1, scrolledIntoSection / scrollableRange));
+
+            // Each slide (except #0) gets an equal share of the scroll
+            // Slide 0 is always fully open; slides 1-4 reveal progressively
+            const revealSlides = totalSlides - 1; // 4 slides to reveal
+            let frontSlide = 0;
+
+            for (let i = 1; i < totalSlides; i++) {
+                // Slide i reveals during range [start, end]
+                const start = (i - 1) / revealSlides;
+                const end = i / revealSlides;
+
+                // Sub-progress within this slide's range: 0..1
+                const subProgress = Math.max(0, Math.min(1, (progress - start) / (end - start)));
+
+                // clip-path: inset(0 X% 0 X%) — X goes from 50% (hidden) to 0% (fully visible)
+                const clipPercent = 50 * (1 - subProgress);
+                prodSlides[i].style.clipPath = `inset(0 ${clipPercent}% 0 ${clipPercent}%)`;
+
+                // Determine which slide is in front (the latest one that's >50% revealed)
+                if (subProgress > 0.3) {
+                    frontSlide = i;
+                }
+            }
+
+            updateCounter(frontSlide);
+        }
+
+        window.addEventListener('scroll', handleProductionScroll, { passive: true });
+        handleProductionScroll();
+
+        // ===== Values Carousel (horizontal scroll) =====
+        const valuesCarousel = document.getElementById('values-carousel');
+        const valuesTrack = document.getElementById('values-track');
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        valuesCarousel.addEventListener('mousedown', (e) => {
+            isDown = true;
+            valuesCarousel.classList.add('values__carousel--grabbing');
+            startX = e.pageX - valuesCarousel.offsetLeft;
+            scrollLeft = valuesCarousel.scrollLeft;
+        });
+
+        valuesCarousel.addEventListener('mouseleave', () => {
+            isDown = false;
+            valuesCarousel.classList.remove('values__carousel--grabbing');
+        });
+
+        valuesCarousel.addEventListener('mouseup', () => {
+            isDown = false;
+            valuesCarousel.classList.remove('values__carousel--grabbing');
+        });
+
+        valuesCarousel.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - valuesCarousel.offsetLeft;
+            const walk = (x - startX) * 2;
+            valuesCarousel.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+
+</body>
+
+</html>

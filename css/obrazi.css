@@ -1,0 +1,266 @@
+/* ======================================================
+   SERGIO DALLINI — Obrazi (Looks) Page Styles
+   ====================================================== */
+
+@font-face {
+    font-family: 'Involve';
+    src: url('../fonts/Involve-Regular.eot');
+    src: url('../fonts/Involve-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Involve-Regular.woff2') format('woff2'),
+        url('../fonts/Involve-Regular.woff') format('woff'),
+        url('../fonts/Involve-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Involve';
+    src: url('../fonts/Involve-Oblique.eot');
+    src: url('../fonts/Involve-Oblique.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Involve-Oblique.woff2') format('woff2'),
+        url('../fonts/Involve-Oblique.woff') format('woff'),
+        url('../fonts/Involve-Oblique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Involve';
+    src: url('../fonts/Involve-SemiBoldOblique.eot');
+    src: url('../fonts/Involve-SemiBoldOblique.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Involve-SemiBoldOblique.woff2') format('woff2'),
+        url('../fonts/Involve-SemiBoldOblique.woff') format('woff'),
+        url('../fonts/Involve-SemiBoldOblique.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ======================================================
+   LOOKS GRID  — 4 columns, matching the Figma spec
+   ====================================================== */
+.looks-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 var(--container-padding) 80px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* ======================================================
+   LOOK CARD
+   ====================================================== */
+.look-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.look-card__image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 455 / 570;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.look-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.look-card:hover .look-card__image {
+    transform: scale(1.05);
+}
+
+/* "Подробнее" button — dark, full width, with arrow */
+.look-card__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    padding: 8px 24px;
+    background: #0B0B0B;
+    color: #FCFCFC;
+    font-size: 18px;
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.36px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.look-card__btn:hover {
+    background: #C3C3C3;
+}
+
+.look-card__btn img {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.look-card__btn:hover img {
+    transform: translate(2px, -2px);
+}
+
+/* ======================================================
+   BREADCRUMB DOT — dark variant for last separator
+   ====================================================== */
+.breadcrumbs__dot--dark {
+    background: #0B0B0B;
+}
+
+/* ======================================================
+   RESPONSIVE — Looks Page
+   ====================================================== */
+
+/* Large Desktop */
+@media (max-width: 1440px) {
+    .looks-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+    }
+}
+
+/* Laptop / Small Desktop */
+@media (max-width: 1200px) {
+    .looks-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+}
+
+/* Tablet Landscape */
+@media (max-width: 1024px) {
+    .looks-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+    .looks-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding-bottom: 60px;
+    }
+
+    .look-card__btn {
+        font-size: 16px;
+        height: 36px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .looks-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding-bottom: 40px;
+    }
+
+    .look-card__btn {
+        font-size: 18px;
+        height: 48px;
+        margin-top: 10px;
+        padding: 8px 24px;
+        gap: 10px;
+    }
+
+    .look-card__btn img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Very small mobile */
+@media (max-width: 400px) {
+    .looks-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* ======================================================
+   LOAD MORE BUTTON (Показать еще)
+   ====================================================== */
+.looks-load-more {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.looks-load-more__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    padding: 8px 40px;
+    background: #0B0B0B;
+    color: #FCFCFC;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0.36px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.looks-load-more__btn:hover {
+    background: #C3C3C3;
+}
+
+/* ======================================================
+   MOBILE FILTERS TOGGLE
+   ====================================================== */
+.catalog-filters__mobile-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .catalog-filters__mobile-toggle {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        width: 100%;
+        color: #0B0B0B;
+        font-size: 20px;
+        font-family: var(--font-primary, 'PT Sans');
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0.60px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .catalog-filters {
+        position: relative;
+    }
+
+    .catalog-filters__tabs {
+        margin-bottom: 15px;
+    }
+
+    .looks-load-more__btn {
+        width: 100%;
+        /* Make max-width or full width on mobile as requested by styling padding */
+        max-width: 362px;
+    }
+}

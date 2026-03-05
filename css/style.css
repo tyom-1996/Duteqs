@@ -1,0 +1,1479 @@
+/* ======================================================
+   SERGIO DALLINI — Global Styles
+   ====================================================== */
+
+/* ---------- CSS Custom Properties ---------- */
+:root {
+  --color-bg: #fcfcfc;
+  --color-dark: #0b0b0b;
+  --color-white: #fcfcfc;
+  --color-black: #0b0b0b;
+
+  --font-heading: "PT Sans", sans-serif;
+  --font-body: "Involve", "Manrope", sans-serif;
+  --font-btn: "Involve", "Manrope", sans-serif;
+  --font-nav: "Involve", sans-serif;
+  --font-accent: "Manrope", sans-serif;
+
+  --container-padding: 20px;
+  --transition-base: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------- @font-face for Involve ---------- */
+@font-face {
+  font-family: 'Involve';
+  src: url('../fonts/Involve-Regular.eot');
+  src: url('../fonts/Involve-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Involve-Regular.woff2') format('woff2'),
+    url('../fonts/Involve-Regular.woff') format('woff'),
+    url('../fonts/Involve-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Involve';
+  src: url('../fonts/Involve-SemiBoldOblique.eot');
+  src: url('../fonts/Involve-SemiBoldOblique.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Involve-SemiBoldOblique.woff2') format('woff2'),
+    url('../fonts/Involve-SemiBoldOblique.woff') format('woff'),
+    url('../fonts/Involve-SemiBoldOblique.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Involve';
+  src: url('../fonts/Involve-Oblique.eot');
+  src: url('../fonts/Involve-Oblique.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Involve-Oblique.woff2') format('woff2'),
+    url('../fonts/Involve-Oblique.woff') format('woff'),
+    url('../fonts/Involve-Oblique.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Involve';
+  src: url('../fonts/Involve-Medium-BF65bb0f6716366.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Involve';
+  src: url('../fonts/Involve-SemiBold-BF65bb0f6747dfe.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Involve';
+  src: url('../fonts/Involve-Bold-BF65bb0f66f270b.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-dark);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity var(--transition-base);
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn--solid-dark img {
+  width: unset !important;
+  height: unset !important;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+
+
+/* ======================================================
+   HERO SECTION
+   ====================================================== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  max-height: 1066px;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__overlay-logo {
+  display: none;
+}
+
+.hero__content {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.hero__subtitle {
+  color: var(--color-white);
+  font-size: 18px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 23.4px;
+  letter-spacing: 0.36px;
+  max-width: 443px;
+  animation: fadeInUp 1s var(--transition-base) 0.3s both;
+}
+
+/* ======================================================
+   BRAND STRIP
+   ====================================================== */
+.brand-strip {
+  width: calc(100% - 42px);
+  margin: -149px auto 0;
+  position: relative;
+  z-index: 3;
+  height: 204px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+}
+
+.brand-strip__logo {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ======================================================
+   ABOUT SECTION
+   ====================================================== */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 978px;
+  position: relative;
+}
+
+.about__image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.about__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.1) 100%);
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 30px 60px 20px;
+}
+
+.about__heading {
+  color: var(--color-dark);
+  font-size: 20px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  max-width: 443px;
+  margin-bottom: 780px;
+}
+
+.about__text {
+  color: black;
+  font-size: 16px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  max-width: 442px;
+  margin-left: auto;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* ======================================================
+   CATEGORY BANNERS — Dime-style sticky stacking
+   ====================================================== */
+
+/* --- Scoped reveal animation (only for category banners) --- */
+.cb-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.cb-reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cb-reveal--delay {
+  transition-delay: 0.2s;
+}
+
+/* --- Stacking wrapper --- */
+.category-stack {
+  position: relative;
+}
+
+/* --- Each banner card --- */
+.category-banner {
+  position: relative;
+  width: 100%;
+  height: 820px;
+  overflow: hidden;
+}
+
+.category-banner--sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  min-height: 600px;
+}
+
+.category-banner__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.category-banner--sticky:hover .category-banner__bg {
+  transform: scale(1.03);
+}
+
+.category-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%);
+  z-index: 1;
+}
+
+.category-banner__content {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--container-padding);
+}
+
+.category-banner__title {
+  position: absolute;
+  text-align: center;
+  color: var(--color-white);
+  font-size: 90px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 81px;
+  letter-spacing: 0.9px;
+}
+
+.category-banner__content .btn {
+  margin-left: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ======================================================
+   VIDEO SECTION
+   ====================================================== */
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 980px;
+  overflow: hidden;
+}
+
+.video-section__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.video-section__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.3) 100%);
+  z-index: 1;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.video-section__bar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: var(--color-dark);
+  z-index: 2;
+}
+
+.video-section__bar--top {
+  top: 0;
+}
+
+.video-section__bar--bottom {
+  bottom: 0;
+}
+
+.video-section__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  transition: opacity 0.4s ease;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    transform var(--transition-base),
+    opacity var(--transition-base);
+}
+
+.video-section__play svg {
+  width: 60px;
+  height: 60px;
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.3));
+}
+
+.video-section__play:hover {
+  transform: translate(-50%, -50%) scale(1.15);
+  opacity: 0.85;
+}
+
+/* ======================================================
+   LOOKS / OUTFITS SECTION
+   ====================================================== */
+.looks {
+  padding: 80px var(--container-padding) 150px;
+}
+
+.looks__header {
+  grid-column: 1 / 4;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+}
+
+.looks__description {
+  color: var(--color-dark);
+  font-size: 20px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  max-width: 475px;
+}
+
+.looks__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  overflow: visible;
+}
+
+/* On desktop, override Swiper's flex layout so the grid works normally */
+.looks__grid .swiper-wrapper {
+  display: contents;
+}
+
+.looks__grid .swiper-slide {
+  width: auto !important;
+}
+
+/* ---------- Look Card ---------- */
+.look-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.look-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 455 / 570;
+  overflow: hidden;
+  background: #e5e5e5;
+}
+
+.look-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.look-card:hover .look-card__image {
+  transform: scale(1.05);
+}
+
+.look-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.look-card:hover .look-card__overlay {
+  opacity: 1;
+}
+
+.look-card__info {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity var(--transition-base),
+    transform var(--transition-base);
+}
+
+.look-card:hover .look-card__info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.look-card__name {
+  color: white;
+  font-size: 18px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0.36px;
+}
+
+.look-card__price {
+  color: white;
+  font-size: 16px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+}
+
+/* ======================================================
+   PROMO BANNER
+   ====================================================== */
+.promo-banner {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  margin-bottom: 150px;
+}
+
+.promo-banner__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.promo-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%);
+  z-index: 1;
+}
+
+.promo-banner__content {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.promo-banner__title {
+  color: var(--color-white);
+  font-size: 90px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 81px;
+  letter-spacing: 0.9px;
+  max-width: 1297px;
+}
+
+
+
+/* ======================================================
+   BUTTONS
+   ====================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  transition:
+    opacity var(--transition-base),
+    transform var(--transition-base),
+    background var(--transition-base),
+    color var(--transition-base);
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* Outline Light Button (e.g. "Подробнее") */
+.btn--outline-light {
+  color: var(--color-white);
+  font-size: 24px;
+  font-family: var(--font-accent);
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.48px;
+  padding: 2px 2px 4px;
+  border-bottom: 1px solid var(--color-white);
+}
+
+.btn--outline-light svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Solid Dark Button (e.g. look card buttons) */
+.btn--solid-dark {
+  background: var(--color-dark);
+  color: var(--color-white);
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.36px;
+  padding: 8px 10px;
+  height: 40px;
+}
+
+.btn--solid-dark:hover {
+  background: #C3C3C3;
+}
+
+.btn--full {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Submit Button */
+.btn--submit {
+  color: var(--color-dark);
+  font-size: 18px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.36px;
+  padding: 2px;
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+.btn--submit svg {
+  width: 18px;
+  height: 18px;
+}
+
+.btn--submit:hover {
+  opacity: 0.6;
+}
+
+.btn--with-icon svg {
+  transition: transform var(--transition-base);
+}
+
+.btn--with-icon:hover svg {
+  transform: translate(3px, -3px);
+}
+
+
+
+/* ======================================================
+   ANIMATIONS
+   ====================================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Intersection Observer-based reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Pagination dots — hidden on desktop */
+.looks__pagination {
+  display: none;
+}
+
+/* ======================================================
+   RESPONSIVE — Desktop → Tablet → Mobile
+   Breakpoints:
+   1440px — Large Desktop (scaling fonts)
+   1200px — Laptop / Small Desktop
+   1024px — Tablet Landscape
+   768px  — Tablet Portrait
+   480px  — Mobile
+   375px  — Small Mobile
+   ====================================================== */
+
+/* ==========================================================
+   LARGE DESKTOP  (max-width: 1440px)
+   ========================================================== */
+@media (max-width: 1440px) {
+  .category-banner__title {
+    font-size: 70px;
+    line-height: 65px;
+  }
+
+  .promo-banner__title {
+    font-size: 70px;
+    line-height: 65px;
+  }
+}
+
+/* ==========================================================
+   LAPTOP / SMALL DESKTOP  (max-width: 1200px)
+   ========================================================== */
+@media (max-width: 1200px) {
+  .looks__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .looks__grid .swiper-wrapper {
+    display: contents;
+  }
+
+  .looks__grid .swiper-slide {
+    width: auto !important;
+  }
+
+  .about {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about__image-wrapper {
+    height: auto;
+  }
+
+  .about__heading {
+    margin-bottom: 40px;
+  }
+
+  .about__content {
+    padding: 40px 20px;
+  }
+
+  /* .about__text {
+    margin-left: 0;
+  } */
+}
+
+/* ==========================================================
+   TABLET LANDSCAPE  (max-width: 1024px)
+   ========================================================== */
+@media (max-width: 1024px) {
+
+  /* ---------- HERO ---------- */
+  .hero {
+    height: 80vh;
+    min-height: 550px;
+    max-height: 800px;
+  }
+
+  .hero__content {
+    padding: 40px 24px;
+  }
+
+  .hero__subtitle {
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 400px;
+  }
+
+  /* ---------- BRAND STRIP ---------- */
+  .brand-strip {
+    width: calc(100% - 32px);
+    height: 140px;
+    margin-top: -80px;
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about {
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+  }
+
+  .about__content {
+    padding: 32px 20px;
+  }
+
+  .about__heading {
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 380px;
+    margin-bottom: 30px;
+  }
+
+  .about__text {
+    font-size: 15px;
+    line-height: 22px;
+    max-width: 380px;
+  }
+
+  /* ---------- CATEGORY BANNER ---------- */
+  .category-banner {
+    height: 550px;
+  }
+
+  .category-banner__title {
+    font-size: 56px;
+    line-height: 52px;
+  }
+
+  .category-banner__content {
+    padding: 40px var(--container-padding);
+  }
+
+  /* ---------- VIDEO SECTION ---------- */
+  .video-section {
+    height: 550px;
+  }
+
+  .video-section__bar {
+    height: 60px;
+  }
+
+  .video-section__play svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* ---------- LOOKS ---------- */
+  .looks {
+    padding: 60px var(--container-padding) 50px;
+  }
+
+  .looks__description {
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 420px;
+  }
+
+  .looks__grid {
+    gap: 16px;
+  }
+
+  .looks__grid .swiper-wrapper {
+    display: contents;
+  }
+
+  .looks__grid .swiper-slide {
+    width: auto !important;
+  }
+
+  /* ---------- PROMO BANNER ---------- */
+  .promo-banner {
+    height: 420px;
+  }
+
+  .promo-banner__title {
+    font-size: 56px;
+    line-height: 52px;
+  }
+}
+
+/* ==========================================================
+   TABLET PORTRAIT  (max-width: 768px)
+   ========================================================== */
+@media (max-width: 768px) {
+  .promo-banner {
+    margin-bottom: 100px !important;
+    height: 503px !important;
+  }
+
+  #looks-section {
+    margin-bottom: 100px;
+  }
+
+  #video-section {
+    margin-bottom: 100px;
+    height: 800px !important;
+  }
+
+  .category-banner__title #video-section {
+    margin-bottom: 100px;
+    height: 800px !important;
+  }
+
+  #category-stack {
+    margin-bottom: 100px;
+  }
+
+  .about {
+    margin-bottom: 100px;
+  }
+
+
+  .hero__overlay {
+    align-items: flex-end !important;
+  }
+
+  .hero__content {
+    display: none !important;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    min-height: auto;
+    max-height: none;
+    height: auto;
+  }
+
+  .hero__bg {
+    height: 500px;
+    position: relative;
+  }
+
+  .hero__overlay {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero__overlay-logo {
+    display: block;
+    width: 100%;
+    max-width: 362px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .hero__content {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    background: var(--color-white);
+    padding: 24px 20px;
+    z-index: 2;
+    height: auto;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .hero__subtitle {
+    color: var(--color-dark);
+    font-size: 15px;
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    max-width: 100%;
+    animation: none;
+  }
+
+  /* ---------- BRAND STRIP ---------- */
+  .brand-strip {
+    display: none;
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .about__content {
+    display: contents;
+  }
+
+  .about__heading {
+    order: 1;
+    padding: 28px var(--container-padding) 20px;
+    font-size: 20px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  .about__image-wrapper {
+    order: 2;
+    width: 100%;
+    height: 400px;
+    margin-left: 0;
+  }
+
+  .about__text {
+    order: 3;
+    padding: 20px var(--container-padding) 0;
+    font-size: 15px;
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.3px;
+    max-width: 100%;
+  }
+
+  /* ---------- CATEGORY BANNER ---------- */
+  .category-banner {
+    height: 800px !important;
+  }
+
+  .category-banner__title {
+    font-size: 48px;
+    line-height: 44px;
+    letter-spacing: 0;
+  }
+
+  .category-banner__content {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    padding: 0 var(--container-padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .category-banner .btn--outline-light {
+    position: absolute;
+    bottom: 20px;
+    right: var(--container-padding);
+    left: auto;
+    top: auto;
+    margin-left: 0;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0.36px;
+    z-index: 3;
+  }
+
+  /* ---------- VIDEO SECTION ---------- */
+  .video-section {
+    height: 600px;
+  }
+
+  .video-section__bar {
+    height: 60px;
+  }
+
+  .video-section__play {
+    width: 200px;
+    height: 200px;
+  }
+
+  .video-section__play svg {
+    width: 60px;
+    height: 80px;
+    opacity: 0.75;
+  }
+
+  /* ---------- LOOKS ---------- */
+  .looks {
+    padding: 40px var(--container-padding) 32px;
+  }
+
+  .looks__header {
+    justify-content: flex-start;
+    margin-bottom: 24px;
+  }
+
+  .looks__description {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.36px;
+    max-width: 100%;
+  }
+
+  .looks__grid {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 40px;
+  }
+
+  .looks__grid .swiper-wrapper {
+    display: flex;
+  }
+
+  .looks__grid .swiper-slide {
+    width: 100% !important;
+    flex-shrink: 0;
+  }
+
+  /* Show all cards in slider */
+  .look-card {
+    display: flex !important;
+  }
+
+  .look-card__image-wrapper {
+    aspect-ratio: 1 / 1.25;
+  }
+
+  .btn--solid-dark {
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.32px;
+    padding: 7px 8px;
+    height: 36px;
+  }
+
+  /* Show pagination dots on tablet/mobile */
+  .looks__pagination {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  .looks__dot {
+    width: 8px;
+    height: 8px;
+    background: #d9d9d9;
+    border-radius: 18px;
+    border: none;
+    cursor: pointer;
+    transition: width var(--transition-base), background var(--transition-base);
+    padding: 0;
+    display: inline-block;
+  }
+
+  .looks__dot--active {
+    width: 24px;
+    background: var(--color-dark);
+  }
+
+  /* ---------- PROMO BANNER ---------- */
+  .promo-banner {
+    height: 450px;
+  }
+
+  .promo-banner__content {
+    bottom: 36px;
+  }
+
+  .promo-banner__title {
+    font-size: 48px;
+    line-height: 44px;
+    letter-spacing: 0;
+    max-width: 550px;
+  }
+}
+
+/* ==========================================================
+   MOBILE  (max-width: 480px)
+   ========================================================== */
+@media (max-width: 480px) {
+
+  /* ---------- HERO ---------- */
+  .hero__bg {
+    height: 420px;
+  }
+
+  .hero__overlay {
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero__subtitle {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.28px;
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about__image-wrapper {
+    width: 269px;
+    height: 276px;
+    margin-left: var(--container-padding);
+  }
+
+  .about__content {
+    padding: 20px var(--container-padding);
+  }
+
+  .about__heading {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 16px;
+  }
+
+  .about__text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  /* ---------- CATEGORY BANNER ---------- */
+  .category-banner {
+    height: 500px;
+  }
+
+  .category-banner__title {
+    font-size: 40px;
+    line-height: 38px;
+  }
+
+  .category-banner__content {
+    padding: 0 var(--container-padding) 28px;
+    gap: 10px;
+  }
+
+  .btn--outline-light {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  /* ---------- VIDEO SECTION ---------- */
+  .video-section {
+    height: 480px;
+  }
+
+  .video-section__bar {
+    height: 48px;
+  }
+
+  .video-section__play {
+    width: 160px;
+    height: 160px;
+  }
+
+  .video-section__play svg {
+    width: 48px;
+    height: 64px;
+  }
+
+  /* ---------- LOOKS ---------- */
+  .looks {
+    padding: 32px var(--container-padding) 24px;
+  }
+
+  .looks__header {
+    margin-bottom: 16px;
+  }
+
+  .looks__description {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 100%;
+  }
+
+  .looks__grid {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 40px;
+  }
+
+  .looks__grid .swiper-wrapper {
+    display: flex;
+  }
+
+  .looks__grid .swiper-slide {
+    width: 100% !important;
+    flex-shrink: 0;
+  }
+
+  /* Show all cards in slider */
+  .look-card {
+    display: flex !important;
+  }
+
+  .look-card__image-wrapper {
+    aspect-ratio: 362 / 454;
+  }
+
+  /* Show pagination dots on mobile */
+  .looks__pagination {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  .looks__dot {
+    width: 8px;
+    height: 8px;
+    background: #d9d9d9;
+    border-radius: 18px;
+    border: none;
+    cursor: pointer;
+    transition: width var(--transition-base), background var(--transition-base);
+    padding: 0;
+    display: inline-block;
+  }
+
+  .looks__dot--active {
+    width: 24px;
+    background: var(--color-dark);
+  }
+
+  /* ---------- PROMO BANNER ---------- */
+  .promo-banner {
+    height: 400px;
+  }
+
+  .promo-banner__content {
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .promo-banner__title {
+    font-size: 40px;
+    line-height: 38px;
+    max-width: 320px;
+  }
+}
+
+/* ==========================================================
+   SMALL MOBILE  (max-width: 375px)
+   ========================================================== */
+@media (max-width: 375px) {
+  .hero__bg {
+    height: 360px;
+  }
+
+  .hero__overlay {
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero__subtitle {
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+  .about__image-wrapper {
+    width: 240px;
+    height: 240px;
+  }
+
+  .about__heading {
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  .about__text {
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  .category-banner {
+    height: 440px;
+  }
+
+  .category-banner__title {
+    font-size: 34px;
+    line-height: 32px;
+  }
+
+  .video-section {
+    height: 400px;
+  }
+
+  .video-section__bar {
+    height: 36px;
+  }
+
+  .video-section__play {
+    width: 120px;
+    height: 120px;
+  }
+
+  .video-section__play svg {
+    width: 36px;
+    height: 48px;
+  }
+
+  .looks__description {
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  .promo-banner {
+    height: 340px;
+  }
+
+  .promo-banner__title {
+    font-size: 32px;
+    line-height: 30px;
+    max-width: 260px;
+  }
+}

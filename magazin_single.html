@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Каталог Sergio Dallini — нательное белье для мужчин, женщин и детей. Итальянское качество и стиль." />
+  <title>Каталог — Sergio Dallini</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Manrope:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/magazin_single.css" />
+  <link rel="stylesheet" href="css/cart-popup.css" />
+</head>
+
+<body>
+  <!-- ===== HEADER + MOBILE MENU (loaded from component) ===== -->
+
+  <script src="js/header-component.js" data-theme="dark" data-modifier="magazin"></script>
+
+  <main>
+
+    <!-- ===== SINGLE PRODUCT SECTION ===== -->
+    <section class="single-product">
+      <!-- Desktop gallery (visible > 768px) -->
+      <div class="single-product__gallery single-product__gallery--main single-product__gallery--desktop">
+        <img src="images/magazin_single_page_img1.webp" alt="Мужские слипы Sergio Dallini"
+          class="single-product__image single-product__image--main" />
+        <img src="images/magazin_single_page_img2.webp" alt="Мужские слипы Sergio Dallini вида 2"
+          class="single-product__image single-product__image--main" />
+      </div>
+
+      <!-- Mobile gallery (visible <= 768px) -->
+      <div class="single-product__gallery-mobile">
+        <!-- Main image Swiper -->
+        <div class="swiper single-product__swiper-main" id="product-main-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/magazin_single_page_img1.webp" alt="Мужские слипы Sergio Dallini"
+                class="single-product__swiper-image" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/magazin_single_page_img2.webp" alt="Мужские слипы Sergio Dallini вида 2"
+                class="single-product__swiper-image" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/magazin_single_page_img3.webp" alt="Мужские слипы Sergio Dallini вида 3"
+                class="single-product__swiper-image" />
+            </div>
+          </div>
+          <div class="swiper-pagination" id="product-main-pagination"></div>
+        </div>
+        <!-- Thumbnails -->
+        <div class="single-product__thumbnails">
+          <div class="single-product__thumb single-product__thumb--active" data-index="0">
+            <img src="images/magazin_single_page_img1.webp" alt="Миниатюра 1" />
+          </div>
+          <div class="single-product__thumb" data-index="1">
+            <img src="images/magazin_single_page_img2.webp" alt="Миниатюра 2" />
+          </div>
+          <div class="single-product__thumb" data-index="2">
+            <img src="images/magazin_single_page_img3.webp" alt="Миниатюра 3" />
+          </div>
+        </div>
+      </div>
+
+      <div class="single-product__details">
+        <!-- ===== BREADCRUMBS ===== -->
+        <div class="breadcrumbs" id="breadcrumbs">
+          <a href="index.html" class="breadcrumbs__link">ГЛАВНАЯ</a>
+          <span class="breadcrumbs__dot"></span>
+          <a href="magazin.html" class="breadcrumbs__link">КАТАЛОГ</a>
+          <span class="breadcrumbs__dot breadcrumbs__dot--dark"></span>
+          <span class="breadcrumbs__current breadcrumbs__current--dark">МУЖСКИЕ СЛИПЫ SERGIO DALLINI</span>
+        </div>
+        <h1 class="single-product__title">Мужские слипы Sergio Dallini</h1>
+        <p class="single-product__sku">SG2940</p>
+        <div class="single-product__price">000₽</div>
+
+        <div class="single-product__option-group">
+          <div class="single-product__option-title">Цвет</div>
+          <div class="single-product__colors">
+            <label class="color-option">
+              <input type="radio" name="color" value="red" checked />
+              <span class="color-swatch color-swatch--red"></span>
+              <span class="color-name">красный</span>
+            </label>
+            <label class="color-option">
+              <input type="radio" name="color" value="white" />
+              <span class="color-swatch color-swatch--white"></span>
+              <span class="color-name">белый</span>
+            </label>
+            <label class="color-option">
+              <input type="radio" name="color" value="lightblue" />
+              <span class="color-swatch color-swatch--lightblue"></span>
+              <span class="color-name">голубой</span>
+            </label>
+            <label class="color-option">
+              <input type="radio" name="color" value="darkblue" />
+              <span class="color-swatch color-swatch--darkblue"></span>
+              <span class="color-name">темно-синий</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="single-product__option-group">
+          <div class="single-product__option-title">Размер</div>
+          <div class="single-product__sizes">
+            <label class="size-option size-option--disabled">
+              <input type="radio" name="size" value="m" disabled />
+              <span class="size-label">M</span>
+            </label>
+            <label class="size-option">
+              <input type="radio" name="size" value="l" checked />
+              <span class="size-label">L</span>
+            </label>
+            <label class="size-option">
+              <input type="radio" name="size" value="xl" />
+              <span class="size-label">XL</span>
+            </label>
+            <label class="size-option size-option--disabled">
+              <input type="radio" name="size" value="xxl" disabled />
+              <span class="size-label">XXL</span>
+            </label>
+            <label class="size-option size-option--disabled">
+              <input type="radio" name="size" value="xxxl" disabled />
+              <span class="size-label">XXXL</span>
+            </label>
+          </div>
+        </div>
+
+        <button class="btn btn--solid-dark btn--full btn--with-icon single-product__more-btn">
+          Подробнее
+          <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
+        </button>
+
+        <div class="single-product__description-block">
+          <div class="single-product__text-info">
+            <p class="single-product__desc">
+              Мужские трусы слипы с гульфиком из премиального хлопкового
+              материала с добавление эластичных нитей, что придает модели
+              отличное прилегание к телу и стойкость к многократным стиркам.
+              Широкая и мягкая эластичная резинка с логотипом бренда, вместе
+              контрастной окантовкой гульфика является украшением изделия и
+              придают трусам особенный вид. Отсутствие боковых швов,
+              анатомические правильные лекала, высококачественная хлопковая
+              ткань -обеспечивают максимальный комфорт на протяжении целого
+              дня.
+            </p>
+            <a href="#" class="single-product__size-guide">Таблица размеров</a>
+          </div>
+
+          <button class="btn btn--solid-dark btn--add-to-cart">
+            В корзину
+          </button>
+
+          <div class="single-product__specs">
+            <div class="spec-item">
+              <div class="spec-header">
+                <span class="spec-title">Материал</span>
+                <span class="spec-icon spec-icon--minus"></span>
+              </div>
+              <div class="spec-content">Хлопок 95% Эластан 5%</div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-header">
+                <span class="spec-title">Модель</span>
+                <span class="spec-icon spec-icon--plus"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RECOMMENDED PRODUCTS ===== -->
+    <section class="recommended-products">
+      <h2 class="recommended-products__title">
+        Вам также могут понравиться эти товары
+      </h2>
+      <div class="catalog-grid catalog-grid--4cols">
+        <div class="product-card">
+          <a href="magazin_single.html" class="product-card__link">
+            <div class="product-card__image-wrapper">
+              <img src="images/magazin_men_img1.webp" alt="Товар" class="product-card__image" />
+            </div>
+          </a>
+          <button class="btn btn--solid-dark btn--full">В корзину</button>
+        </div>
+        <div class="product-card">
+          <a href="magazin_single.html" class="product-card__link">
+            <div class="product-card__image-wrapper">
+              <img src="images/magazin_men_img2.webp" alt="Товар" class="product-card__image" />
+            </div>
+          </a>
+          <button class="btn btn--solid-dark btn--full">В корзину</button>
+        </div>
+        <div class="product-card">
+          <a href="magazin_single.html" class="product-card__link">
+            <div class="product-card__image-wrapper">
+              <img src="images/magazin_men_img3.webp" alt="Товар" class="product-card__image" />
+            </div>
+          </a>
+          <button class="btn btn--solid-dark btn--full">В корзину</button>
+        </div>
+        <div class="product-card">
+          <a href="magazin_single.html" class="product-card__link">
+            <div class="product-card__image-wrapper">
+              <img src="images/magazin_men_img4.webp" alt="Товар" class="product-card__image" />
+            </div>
+          </a>
+          <button class="btn btn--solid-dark btn--full">В корзину</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LOOKS SECTION ===== -->
+    <section class="recommended-products recommended-products--looks">
+      <h2 class="recommended-products__title">Образы с этим товаром</h2>
+      <div class="catalog-grid catalog-grid--4cols">
+        <div class="product-card">
+          <div class="product-card__image-wrapper">
+            <img src="images/magazin_men_img5.webp" alt="Образ 1" class="product-card__image" />
+          </div>
+          <button class="btn btn--solid-dark btn--full btn--with-icon">
+            Подробнее
+            <img src="svg/arrow-up-right-light.svg" alt="" width="18" height="18" />
+          </button>
+        </div>
+        <div class="product-card">
+          <div class="product-card__image-wrapper">
+            <img src="images/magazin_men_img6.webp" alt="Образ 2" class="product-card__image" />
+          </div>
+          <button class="btn btn--solid-dark btn--full btn--with-icon">
+            Подробнее
+            <img src="svg/arrow-up-right-light.svg" alt="" width="18" height="18" />
+          </button>
+        </div>
+        <div class="product-card">
+          <div class="product-card__image-wrapper">
+            <img src="images/magazin_men_img7.webp" alt="Образ 3" class="product-card__image" />
+          </div>
+          <button class="btn btn--solid-dark btn--full btn--with-icon">
+            Подробнее
+            <img src="svg/arrow-up-right-light.svg" alt="" width="18" height="18" />
+          </button>
+        </div>
+        <div class="product-card">
+          <div class="product-card__image-wrapper">
+            <img src="images/magazin_men_img8.webp" alt="Образ 4" class="product-card__image" />
+          </div>
+          <button class="btn btn--solid-dark btn--full btn--with-icon">
+            Подробнее
+            <img src="svg/arrow-up-right-light.svg" alt="" width="18" height="18" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== POPULAR LOOKS SECTION ===== -->
+    <section class="recommended-products recommended-products--looks-popular">
+      <h2 class="recommended-products__title">
+        Популярные образы с этим товаром
+      </h2>
+      <div class="single-product__gallery single-product__gallery--popular-looks swiper" id="popular-looks-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="single-product__image-container">
+              <img src="images/magazin_single_page_img3.webp" alt="Популярный образ 1"
+                class="single-product__image single-product__image--look" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="single-product__image-container">
+              <img src="images/magazin_single_page_img4.webp" alt="Популярный образ 2"
+                class="single-product__image single-product__image--look" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="single-product__image-container">
+              <img src="images/magazin_men_img5.webp" alt="Популярный образ 3"
+                class="single-product__image single-product__image--look" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="single-product__image-container">
+              <img src="images/magazin_men_img6.webp" alt="Популярный образ 4"
+                class="single-product__image single-product__image--look" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="single-product__image-container">
+              <img src="images/magazin_men_img7.webp" alt="Популярный образ 5"
+                class="single-product__image single-product__image--look" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="single-product__image-container">
+              <img src="images/magazin_men_img8.webp" alt="Популярный образ 6"
+                class="single-product__image single-product__image--look" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination popular-looks__pagination" id="popular-looks-pagination"></div>
+      </div>
+    </section>
+
+    <!-- ===== NEWSLETTER (loaded from component) ===== -->
+
+    <script src="js/newsletter-component.js"></script>
+
+  </main>
+
+  <!-- ===== FOOTER (loaded from component) ===== -->
+  <script src="js/footer-component.js"></script>
+
+  <script src="js/header.js"></script>
+  <script src="js/newsletter.js"></script>
+  <script>
+    // Catalog filter tabs
+    const tabs = document.querySelectorAll(".catalog-filters__tab");
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((t) =>
+          t.classList.remove("catalog-filters__tab--active"),
+        );
+        tab.classList.add("catalog-filters__tab--active");
+      });
+    });
+
+
+
+    // Product card hover effect
+    document.querySelectorAll(".product-card").forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        card.classList.add("product-card--hover");
+      });
+      card.addEventListener("mouseleave", () => {
+        card.classList.remove("product-card--hover");
+      });
+    });
+  </script>
+  <script src="js/cart-popup.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Popular Looks Swiper
+    const popularLooksSwiper = new Swiper('#popular-looks-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: '#popular-looks-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+      },
+    });
+
+    // Product Main Gallery Swiper (mobile thumbnails)
+    const productMainSwiper = new Swiper('#product-main-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      pagination: {
+        el: '#product-main-pagination',
+        clickable: true,
+      },
+      on: {
+        slideChange: function () {
+          const thumbs = document.querySelectorAll('.single-product__thumb');
+          thumbs.forEach(t => t.classList.remove('single-product__thumb--active'));
+          const activeThumb = document.querySelector('.single-product__thumb[data-index="' + this.activeIndex + '"]');
+          if (activeThumb) activeThumb.classList.add('single-product__thumb--active');
+        },
+      },
+    });
+
+    // Thumbnail click → navigate swiper
+    document.querySelectorAll('.single-product__thumb').forEach(thumb => {
+      thumb.addEventListener('click', function () {
+        const idx = parseInt(this.getAttribute('data-index'), 10);
+        productMainSwiper.slideTo(idx);
+      });
+    });
+  </script>
+</body>
+
+</html>

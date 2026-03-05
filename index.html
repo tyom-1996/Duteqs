@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sergio Dallini — итальянский бренд нательного белья. Дорогой комфорт, стиль и качество более 13 лет.">
+    <title>Sergio Dallini — Детали, которые тебя раскрывают</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Manrope:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER + MOBILE MENU (loaded from component) ===== -->
+    <script src="js/header-component.js" data-theme="light"></script>
+
+
+    <main>
+
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero" id="hero">
+            <div class="hero__overlay">
+                <img src="svg/sergio-dallini-hero.svg" alt="Sergio Dallini" class="hero__overlay-logo">
+            </div>
+            <img src="images/img1.webp" alt="Sergio Dallini — итальянское нательное белье" class="hero__bg">
+            <div class="hero__content">
+                <p class="hero__subtitle">Итальянский бренд с долгой историей. Занимаемся производством лучшего
+                    нательного белья более 13 лет, чтобы дарить комфорт вам и вашему телу!</p>
+            </div>
+        </section>
+
+        <!-- ===== WHITE BANNER STRIP ===== -->
+        <div class="brand-strip" id="brand-strip">
+            <img src="svg/brand-strip.svg" alt="Sergio Dallini" class="brand-strip__logo">
+        </div>
+
+        <!-- ===== ABOUT SECTION ===== -->
+        <section class="about" id="about">
+            <div class="about__image-wrapper">
+                <img src="images/img2.webp" alt="О бренде Sergio Dallini" class="about__image">
+                <div class="about__image-overlay"></div>
+            </div>
+            <div class="about__content">
+                <h2 class="about__heading">Мы хотим, чтобы наше белье стало не просто частью вашего гардероба. Но
+                    стало
+                    отражением вашего стиля и жизненных принципов!</h2>
+                <p class="about__text">У нас вы можете найти белье на любой вкус - для спорта,
+                    для офиса, для долгих
+                    прогулок, для томных вечеров и особых случаев! Начни свой день с Sergio Dallini!</p>
+            </div>
+        </section>
+
+        <!-- ===== CATEGORY BANNERS (Dime-style sticky stacking) ===== -->
+        <div class="category-stack" id="category-stack">
+
+            <section class="category-banner category-banner--sticky" id="women-section" style="z-index: 1;">
+                <div class="category-banner__overlay"></div>
+                <img src="images/img3.webp" alt="Коллекция для женщин" class="category-banner__bg">
+                <div class="category-banner__content">
+                    <h2 class="category-banner__title cb-reveal">для женщин</h2>
+                    <a href="#" class="btn btn--outline-light btn--with-icon cb-reveal cb-reveal--delay"
+                        id="women-details-btn">
+                        <span>Подробнее</span>
+                        <img src="svg/arrow-up-right-light.svg" alt="" width="18" height="18">
+                    </a>
+                </div>
+            </section>
+
+            <section class="category-banner category-banner--sticky" id="men-section" style="z-index: 2;">
+                <div class="category-banner__overlay"></div>
+                <img src="images/for_men_img.webp" alt="Коллекция для мужчин" class="category-banner__bg">
+                <div class="category-banner__content">
+                    <h2 class="category-banner__title cb-reveal">для мужчин</h2>
+                    <a href="#" class="btn btn--outline-light btn--with-icon cb-reveal cb-reveal--delay"
+                        id="men-details-btn">
+                        <span>Подробнее</span>
+                        <img src="svg/arrow-up-right-light.svg" alt="" width="18" height="18">
+                    </a>
+                </div>
+            </section>
+
+            <section class="category-banner category-banner--sticky" id="children-section" style="z-index: 3;">
+                <div class="category-banner__overlay"></div>
+                <img src="images/for_child.webp" alt="Коллекция для детей" class="category-banner__bg">
+                <div class="category-banner__content">
+                    <h2 class="category-banner__title cb-reveal">для детей</h2>
+                    <a href="#" class="btn btn--outline-light btn--with-icon cb-reveal cb-reveal--delay"
+                        id="children-details-btn">
+                        <span>Подробнее</span>
+                        <img src="svg/arrow-up-right-light.svg" alt="" width="18" height="18">
+                    </a>
+                </div>
+            </section>
+
+            <section class="category-banner category-banner--sticky" id="looks-banner-section" style="z-index: 4;">
+                <div class="category-banner__overlay"></div>
+                <img src="images/popular_examples.webp" alt="Популярные образы" class="category-banner__bg">
+                <div class="category-banner__content">
+                    <h2 class="category-banner__title cb-reveal">популярные образы</h2>
+                    <a href="#" class="btn btn--outline-light btn--with-icon cb-reveal cb-reveal--delay"
+                        id="looks-details-btn">
+                        <span>Подробнее</span>
+                        <img src="svg/arrow-up-right-light.svg" alt="" width="18" height="18">
+                    </a>
+                </div>
+            </section>
+
+            <section class="category-banner category-banner--sticky" id="news-section" style="z-index: 5;">
+                <div class="category-banner__overlay"></div>
+                <img src="images/news.webp" alt="Новинки" class="category-banner__bg">
+                <div class="category-banner__content">
+                    <h2 class="category-banner__title cb-reveal">новинки</h2>
+                    <a href="#" class="btn btn--outline-light btn--with-icon cb-reveal cb-reveal--delay"
+                        id="news-details-btn">
+                        <span>Подробнее</span>
+                        <img src="svg/arrow-up-right-light.svg" alt="" width="18" height="18">
+                    </a>
+                </div>
+            </section>
+
+            <section class="category-banner category-banner--sticky" id="sale-section" style="z-index: 6;">
+                <div class="category-banner__overlay"></div>
+                <img src="images/sale.webp" alt="Sale" class="category-banner__bg">
+                <div class="category-banner__content">
+                    <h2 class="category-banner__title cb-reveal">sale</h2>
+                    <a href="#" class="btn btn--outline-light btn--with-icon cb-reveal cb-reveal--delay"
+                        id="sale-details-btn">
+                        <span>Подробнее</span>
+                        <img src="svg/arrow-up-right-light.svg" alt="" width="18" height="18">
+                    </a>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- ===== VIDEO / BRAND SECTION ===== -->
+        <section class="video-section" id="video-section">
+            <div class="video-section__overlay" id="video-overlay"></div>
+            <video class="video-section__bg" id="brand-video" poster="images/img4.webp" preload="metadata" playsinline>
+                <source src="images/Запись_встречи_02_03_2026_15_40_09_запись.webm" type="video/webm">
+            </video>
+            <div class="video-section__bar video-section__bar--top"></div>
+            <div class="video-section__bar video-section__bar--bottom"></div>
+            <div class="video-section__play" id="play-btn" aria-label="Воспроизвести видео">
+                <img src="svg/play.svg" alt="Воспроизвести" width="82" height="130">
+            </div>
+        </section>
+
+        <!-- ===== LOOKS / OUTFITS SECTION ===== -->
+        <section class="looks" id="looks-section">
+            <div class="looks__header">
+                <h2 class="looks__description">Образы для тех, кто не может определиться с выбором! Собрали самые яркие
+                    комбинации от наших инфлюенсеров и партнеров, чтобы вас шоппинг стал проще!</h2>
+            </div>
+            <div class="looks__grid swiper" id="looks-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="look-card" id="look-card-1">
+                            <div class="look-card__image-wrapper">
+                                <img src="images/img5.webp" alt="Образ 1" class="look-card__image">
+                                <div class="look-card__overlay"></div>
+                                <div class="look-card__info">
+                                    <span class="look-card__name">Название</span>
+                                    <span class="look-card__price">00.00 Руб.</span>
+                                </div>
+                            </div>
+                            <button class="btn btn--solid-dark btn--full" id="look-btn-1">Смотреть образ</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="look-card" id="look-card-2">
+                            <div class="look-card__image-wrapper">
+                                <img src="images/img6.webp" alt="Образ 2" class="look-card__image">
+                            </div>
+                            <button class="btn btn--solid-dark btn--full" id="look-btn-2">Смотреть образ</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="look-card" id="look-card-3">
+                            <div class="look-card__image-wrapper">
+                                <img src="images/img7.webp" alt="Образ 3" class="look-card__image">
+                            </div>
+                            <button class="btn btn--solid-dark btn--full" id="look-btn-3">Смотреть образ</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="look-card" id="look-card-4">
+                            <div class="look-card__image-wrapper">
+                                <img src="images/img8.webp" alt="Образ 4" class="look-card__image">
+                            </div>
+                            <button class="btn btn--solid-dark btn--full" id="look-btn-4">Смотреть образ</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Swiper Pagination -->
+                <div class="swiper-pagination looks__pagination" id="looks-pagination"></div>
+            </div>
+        </section>
+
+        <!-- ===== PROMO BANNER ===== -->
+        <section class="promo-banner" id="promo-banner">
+            <div class="promo-banner__overlay"></div>
+            <img src="images/img9.webp" alt="Дорогой комфорт — дешево!" class="promo-banner__bg">
+            <div class="promo-banner__content">
+                <h2 class="promo-banner__title">Дорогой комфорт - дешево!</h2>
+            </div>
+        </section>
+
+        <!-- ===== NEWSLETTER (loaded from component) ===== -->
+
+        <script src="js/newsletter-component.js"></script>
+
+    </main>
+
+    <!-- ===== FOOTER (loaded from component) ===== -->
+    <script src="js/footer-component.js"></script>
+
+    <script src="js/header.js"></script>
+    <script src="js/newsletter.js"></script>
+    <script>
+        // Video play/pause
+        const brandVideo = document.getElementById('brand-video');
+        const playBtn = document.getElementById('play-btn');
+        const videoOverlay = document.getElementById('video-overlay');
+
+        function playVideo() {
+            brandVideo.play();
+            playBtn.style.opacity = '0';
+            playBtn.style.pointerEvents = 'none';
+            videoOverlay.style.opacity = '0';
+        }
+
+        function pauseVideo() {
+            brandVideo.pause();
+            playBtn.style.opacity = '1';
+            playBtn.style.pointerEvents = 'auto';
+            videoOverlay.style.opacity = '1';
+        }
+
+        playBtn.addEventListener('click', playVideo);
+
+        brandVideo.addEventListener('click', () => {
+            if (brandVideo.paused) {
+                playVideo();
+            } else {
+                pauseVideo();
+            }
+        });
+
+        brandVideo.addEventListener('ended', pauseVideo);
+
+        // Look card hover animations
+        document.querySelectorAll('.look-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.classList.add('look-card--hover');
+            });
+            card.addEventListener('mouseleave', () => {
+                card.classList.remove('look-card--hover');
+            });
+        });
+
+        // Category banner — scroll-triggered text reveal (Dime-style)
+        const cbRevealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('cb-reveal--visible');
+                } else {
+                    entry.target.classList.remove('cb-reveal--visible');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.cb-reveal').forEach(el => {
+            cbRevealObserver.observe(el);
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Looks Swiper — mobile only (≤768px)
+        let looksSwiper = null;
+        const LOOKS_MOBILE_BP = 768;
+
+        function initLooksSwiper() {
+            if (window.innerWidth <= LOOKS_MOBILE_BP && !looksSwiper) {
+                looksSwiper = new Swiper('#looks-swiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 16,
+                    pagination: {
+                        el: '#looks-pagination',
+                        clickable: true,
+                        bulletClass: 'looks__dot',
+                        bulletActiveClass: 'looks__dot--active',
+                    },
+                });
+            }
+        }
+
+        function destroyLooksSwiper() {
+            if (looksSwiper) {
+                looksSwiper.destroy(true, true);
+                looksSwiper = null;
+            }
+        }
+
+        function handleLooksSwiperResize() {
+            if (window.innerWidth <= LOOKS_MOBILE_BP) {
+                initLooksSwiper();
+            } else {
+                destroyLooksSwiper();
+            }
+        }
+
+        // Init on load & respond to resize
+        handleLooksSwiperResize();
+        window.addEventListener('resize', handleLooksSwiperResize);
+    </script>
+
+</body>
+
+</html>

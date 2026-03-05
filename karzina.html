@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Корзина — Sergio Dallini. Оформите заказ на нательное белье итальянского качества." />
+    <title>Корзина — Sergio Dallini</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Manrope:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/magazin.css" />
+    <link rel="stylesheet" href="css/karzina.css" />
+</head>
+
+<body>
+    <!-- ===== HEADER + MOBILE MENU (loaded from component) ===== -->
+
+    <script src="js/header-component.js" data-theme="dark" data-modifier="magazin"></script>
+
+    <main>
+        <!-- ===== BREADCRUMBS ===== -->
+        <div class="breadcrumbs cart-breadcrumbs" id="breadcrumbs">
+            <a href="index.html" class="breadcrumbs__link">ГЛАВНАЯ</a>
+            <span class="breadcrumbs__dot"></span>
+            <a href="magazin.html" class="breadcrumbs__link">КАТАЛОГ</a>
+            <span class="breadcrumbs__dot"></span>
+            <span class="breadcrumbs__link">ТОВАР</span>
+            <span class="breadcrumbs__dot breadcrumbs__dot--dark"></span>
+            <span class="breadcrumbs__current breadcrumbs__current--dark">КОРЗИНА</span>
+        </div>
+
+        <!-- ===== CART PAGE ===== -->
+        <section class="cart-page" id="cart-page">
+
+            <!-- LEFT COLUMN: Title + Cart Items + Total -->
+            <div class="cart-page__left">
+                <h1 class="cart-page__title">Ваш заказ:</h1>
+
+                <div class="cart-page__items">
+                    <!-- Cart Item 1 -->
+                    <div class="cart-item" id="cart-item-1">
+                        <div class="cart-item__image">
+                            <img src="images/magazin_img1.webp" alt="Мужские слипы Sergio Dallini" />
+                        </div>
+                        <div class="cart-item__body">
+                            <div class="cart-item__info">
+                                <div class="cart-item__name">Мужские слипы Sergio Dallini</div>
+                                <div class="cart-item__material">Материал: Хлопок 100%</div>
+                                <div class="cart-item__size">Размер: S</div>
+                            </div>
+                            <div class="cart-item__controls">
+                                <div class="cart-item__quantity">
+                                    <button class="cart-item__qty-btn cart-item__qty-btn--minus"
+                                        aria-label="Уменьшить количество" data-item="1">
+                                        <span class="qty-icon-minus"></span>
+                                    </button>
+                                    <span class="cart-item__qty-value" id="qty-value-1">1</span>
+                                    <button class="cart-item__qty-btn cart-item__qty-btn--plus"
+                                        aria-label="Увеличить количество" data-item="1">
+                                        <span class="qty-icon-plus"></span>
+                                    </button>
+                                </div>
+                                <div class="cart-item__price-group">
+                                    <span class="cart-item__price">15 000₽</span>
+                                    <button class="cart-item__remove" aria-label="Удалить товар" data-item="1">
+                                        <span class="remove-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cart Item 2 -->
+                    <div class="cart-item" id="cart-item-2">
+                        <div class="cart-item__image">
+                            <img src="images/magazin_img2.webp" alt="Мужские слипы Sergio Dallini" />
+                        </div>
+                        <div class="cart-item__body">
+                            <div class="cart-item__info">
+                                <div class="cart-item__name">Мужские слипы Sergio Dallini</div>
+                                <div class="cart-item__material">Материал: Хлопок 100%</div>
+                                <div class="cart-item__size">Размер: S</div>
+                            </div>
+                            <div class="cart-item__controls">
+                                <div class="cart-item__quantity">
+                                    <button class="cart-item__qty-btn cart-item__qty-btn--minus"
+                                        aria-label="Уменьшить количество" data-item="2">
+                                        <span class="qty-icon-minus"></span>
+                                    </button>
+                                    <span class="cart-item__qty-value" id="qty-value-2">1</span>
+                                    <button class="cart-item__qty-btn cart-item__qty-btn--plus"
+                                        aria-label="Увеличить количество" data-item="2">
+                                        <span class="qty-icon-plus"></span>
+                                    </button>
+                                </div>
+                                <div class="cart-item__price-group">
+                                    <span class="cart-item__price">15 000₽</span>
+                                    <button class="cart-item__remove" aria-label="Удалить товар" data-item="2">
+                                        <span class="remove-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cart Item 3 -->
+                    <div class="cart-item" id="cart-item-3">
+                        <div class="cart-item__image">
+                            <img src="images/magazin_img3.webp" alt="Мужские слипы Sergio Dallini" />
+                        </div>
+                        <div class="cart-item__body">
+                            <div class="cart-item__info">
+                                <div class="cart-item__name">Мужские слипы Sergio Dallini</div>
+                                <div class="cart-item__material">Материал: Хлопок 100%</div>
+                                <div class="cart-item__size">Размер: S</div>
+                            </div>
+                            <div class="cart-item__controls">
+                                <div class="cart-item__quantity">
+                                    <button class="cart-item__qty-btn cart-item__qty-btn--minus"
+                                        aria-label="Уменьшить количество" data-item="3">
+                                        <span class="qty-icon-minus"></span>
+                                    </button>
+                                    <span class="cart-item__qty-value" id="qty-value-3">1</span>
+                                    <button class="cart-item__qty-btn cart-item__qty-btn--plus"
+                                        aria-label="Увеличить количество" data-item="3">
+                                        <span class="qty-icon-plus"></span>
+                                    </button>
+                                </div>
+                                <div class="cart-item__price-group">
+                                    <span class="cart-item__price">15 000₽</span>
+                                    <button class="cart-item__remove" aria-label="Удалить товар" data-item="3">
+                                        <span class="remove-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Total -->
+                <div class="cart-page__total" id="cart-total">
+                    <span class="cart-page__total-label">Итоговая сумма</span>
+                </div>
+            </div>
+            <div class="cart_line"></div>
+
+            <!-- RIGHT COLUMN: Checkout Form -->
+            <div class="cart-page__right">
+                <form class="checkout-form" id="checkout-form" autocomplete="off">
+
+                    <!-- Name -->
+                    <div class="checkout-form__field">
+                        <input type="text" name="name" id="checkout-name" class="checkout-form__input"
+                            placeholder="Ваше имя" required />
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="checkout-form__field checkout-form__field--phone">
+                        <div class="checkout-form__phone-prefix">
+                            <div class="checkout-form__flag">
+                                <span class="flag-stripe flag-stripe--white"></span>
+                                <span class="flag-stripe flag-stripe--blue"></span>
+                                <span class="flag-stripe flag-stripe--red"></span>
+                            </div>
+                            <span class="checkout-form__phone-arrow"></span>
+                            <span class="checkout-form__phone-code">+7</span>
+                        </div>
+                        <input type="tel" name="phone" id="checkout-phone"
+                            class="checkout-form__input checkout-form__input--phone" placeholder="(000) 000 00 00"
+                            required />
+                    </div>
+
+                    <!-- Email -->
+                    <div class="checkout-form__field">
+                        <input type="email" name="email" id="checkout-email" class="checkout-form__input"
+                            placeholder="Ваш email" required />
+                    </div>
+
+                    <!-- Promo code -->
+                    <div class="checkout-form__field">
+                        <input type="text" name="promo" id="checkout-promo"
+                            class="checkout-form__input checkout-form__input--promo" placeholder="Введите промокод" />
+                    </div>
+
+                    <!-- Delivery section -->
+                    <div class="checkout-form__section">
+                        <h2 class="checkout-form__section-title">Доставка</h2>
+                        <div class="checkout-form__field">
+                            <input type="text" name="city" id="checkout-city" class="checkout-form__input"
+                                placeholder="Город" required />
+                        </div>
+                        <div class="checkout-form__field">
+                            <input type="text" name="address" id="checkout-address"
+                                class="checkout-form__input checkout-form__input--promo"
+                                placeholder="Страна, город, адрес" />
+                        </div>
+                    </div>
+
+                    <!-- Payment method -->
+                    <div class="checkout-form__section">
+                        <h2 class="checkout-form__section-title">Способ оплаты</h2>
+                        <div class="checkout-form__radios">
+                            <label class="checkout-form__radio-label" id="payment-1">
+                                <input type="radio" name="payment" value="method1" class="checkout-form__radio-input"
+                                    checked />
+                                <span class="checkout-form__radio-circle">
+                                    <span class="checkout-form__radio-dot"></span>
+                                </span>
+                                <span class="checkout-form__radio-text">Способ 1</span>
+                            </label>
+                            <label class="checkout-form__radio-label" id="payment-2">
+                                <input type="radio" name="payment" value="method2" class="checkout-form__radio-input" />
+                                <span class="checkout-form__radio-circle">
+                                    <span class="checkout-form__radio-dot"></span>
+                                </span>
+                                <span class="checkout-form__radio-text">Способ 2</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="checkout-form__submit" id="checkout-submit">
+                        Оформить заказ
+                    </button>
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- ===== FOOTER (loaded from component) ===== -->
+    <script src="js/footer-component.js"></script>
+
+    <script src="js/header.js"></script>
+    <script>
+        // ===== QUANTITY CONTROLS =====
+        document.querySelectorAll('.cart-item__qty-btn--plus').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const itemId = btn.getAttribute('data-item');
+                const qtyEl = document.getElementById('qty-value-' + itemId);
+                let qty = parseInt(qtyEl.textContent);
+                qty++;
+                qtyEl.textContent = qty;
+            });
+        });
+
+        document.querySelectorAll('.cart-item__qty-btn--minus').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const itemId = btn.getAttribute('data-item');
+                const qtyEl = document.getElementById('qty-value-' + itemId);
+                let qty = parseInt(qtyEl.textContent);
+                if (qty > 1) {
+                    qty--;
+                    qtyEl.textContent = qty;
+                }
+            });
+        });
+
+        // ===== REMOVE ITEM =====
+        document.querySelectorAll('.cart-item__remove').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const itemId = btn.getAttribute('data-item');
+                const cartItem = document.getElementById('cart-item-' + itemId);
+                cartItem.style.transition = 'opacity 0.3s, transform 0.3s';
+                cartItem.style.opacity = '0';
+                cartItem.style.transform = 'translateX(-20px)';
+                setTimeout(() => {
+                    cartItem.remove();
+                }, 300);
+            });
+        });
+
+        // ===== CHECKOUT FORM =====
+        const checkoutForm = document.getElementById('checkout-form');
+        checkoutForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('checkout-name').value;
+            const phone = document.getElementById('checkout-phone').value;
+            const email = document.getElementById('checkout-email').value;
+            if (name && phone && email) {
+                alert('Спасибо за заказ, ' + name + '! Мы свяжемся с вами по номеру +7' + phone);
+                checkoutForm.reset();
+            }
+        });
+
+        // ===== PHONE INPUT MASK =====
+        const phoneInput = document.getElementById('checkout-phone');
+        phoneInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 10) value = value.slice(0, 10);
+            let formatted = '';
+            if (value.length > 0) formatted += '(' + value.slice(0, 3);
+            if (value.length >= 3) formatted += ') ';
+            if (value.length > 3) formatted += value.slice(3, 6);
+            if (value.length > 6) formatted += ' ' + value.slice(6, 8);
+            if (value.length > 8) formatted += ' ' + value.slice(8, 10);
+            e.target.value = formatted;
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,404 @@
+/* ======================================================
+   SERGIO DALLINI — Clients Page Styles (Клиентам)
+   ====================================================== */
+
+@font-face {
+    font-family: 'Involve';
+    src: url('../fonts/Involve-Regular.eot');
+    src: url('../fonts/Involve-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Involve-Regular.woff2') format('woff2'),
+        url('../fonts/Involve-Regular.woff') format('woff'),
+        url('../fonts/Involve-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Involve';
+    src: url('../fonts/Involve-SemiBoldOblique.eot');
+    src: url('../fonts/Involve-SemiBoldOblique.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Involve-SemiBoldOblique.woff2') format('woff2'),
+        url('../fonts/Involve-SemiBoldOblique.woff') format('woff'),
+        url('../fonts/Involve-SemiBoldOblique.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Involve';
+    src: url('../fonts/Involve-Oblique.eot');
+    src: url('../fonts/Involve-Oblique.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Involve-Oblique.woff2') format('woff2'),
+        url('../fonts/Involve-Oblique.woff') format('woff'),
+        url('../fonts/Involve-Oblique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
+/* ======================================================
+   CLIENTS HERO — Large Title "КЛИЕНТАМ"
+   ====================================================== */
+.clients-hero {
+    padding: 75px var(--container-padding) 40px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.clients-hero__title {
+    color: #0B0B0B;
+    font-size: clamp(120px, 14.3vw, 274px);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+/* ======================================================
+   CLIENTS SECTION — Delivery & Payment
+   ====================================================== */
+.clients-section {
+    padding: 0 var(--container-padding) 60px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.clients-section__title {
+    color: #0B0B0B;
+    font-size: clamp(48px, 4.7vw, 90px);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 0.9;
+    letter-spacing: 0.01em;
+    margin: 0 0 32px 0;
+}
+
+/* ======================================================
+   DELIVERY ACCORDION
+   ====================================================== */
+.clients-accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---- Individual Delivery Item ---- */
+.clients-item {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.clients-item:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* ---- Item Header (clickable) ---- */
+.clients-item__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 24px 0;
+    padding-left: 19px;
+    padding-right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: opacity 0.3s ease;
+}
+
+.clients-item__header:hover {
+    opacity: 0.7;
+}
+
+.clients-item__question {
+    color: #0B0B0B;
+    font-size: 24px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 24px;
+    flex: 1;
+    min-width: 0;
+    word-break: break-word;
+}
+
+/* ---- Toggle Icon (plus / minus) ---- */
+.clients-item__icon {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clients-item__icon-line {
+    position: absolute;
+    background: #0B0B0B;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients-item__icon-line--h {
+    width: 35px;
+    height: 2.67px;
+}
+
+.clients-item__icon-line--v {
+    width: 2.67px;
+    height: 35px;
+}
+
+/* When item is open, rotate the vertical line to form a minus */
+.clients-item--open .clients-item__icon-line--v {
+    transform: rotate(90deg);
+    opacity: 0;
+}
+
+/* ---- Collapsible Content ---- */
+.clients-item__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients-item__answer {
+    padding: 0 19px 32px;
+    max-width: 1032px;
+    color: #0B0B0B;
+    font-size: 16px;
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+}
+
+/* ======================================================
+   PAYMENT TEXT BLOCK
+   ====================================================== */
+.clients-text {
+    max-width: 1032px;
+    color: #0B0B0B;
+    font-size: 16px;
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+    margin: 0;
+}
+
+/* ======================================================
+   RESPONSIVE — Clients Page
+   ====================================================== */
+
+/* Large Desktop */
+@media (max-width: 1440px) {
+    .clients-hero__title {
+        font-size: clamp(100px, 12vw, 220px);
+    }
+
+    .clients-section__title {
+        font-size: clamp(40px, 5vw, 70px);
+    }
+}
+
+/* Tablet Landscape */
+@media (max-width: 1024px) {
+    .clients-hero {
+        padding-top: 90px;
+        padding-bottom: 30px;
+    }
+
+    .clients-hero__title {
+        font-size: clamp(80px, 12vw, 160px);
+    }
+
+    .clients-section__title {
+        font-size: 50px;
+        margin-bottom: 24px;
+    }
+
+    .clients-item__header {
+        padding: 20px 0;
+        padding-left: 12px;
+    }
+
+    .clients-item__question {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .clients-item__icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .clients-item__icon-line--h {
+        width: 26px;
+        height: 2px;
+    }
+
+    .clients-item__icon-line--v {
+        width: 2px;
+        height: 26px;
+    }
+
+    .clients-item__answer {
+        padding-left: 12px;
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .clients-section {
+        padding-bottom: 40px;
+    }
+
+    .clients-text {
+        font-size: 15px;
+        line-height: 22px;
+    }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+    .clients-section {
+        margin-bottom: 100px;
+    }
+
+    .clients-hero {
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+
+    .clients-hero__title {
+        font-size: clamp(60px, 12vw, 120px);
+    }
+
+    .clients-section__title {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .clients-item__header {
+        padding: 18px 0;
+        padding-left: 10px;
+    }
+
+    .clients-item__question {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .clients-item__icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .clients-item__icon-line--h {
+        width: 22px;
+        height: 2px;
+    }
+
+    .clients-item__icon-line--v {
+        width: 2px;
+        height: 22px;
+    }
+
+    .clients-item__answer {
+        padding-left: 10px;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .clients-section {
+        padding-bottom: 32px;
+    }
+
+    .clients-text {
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
+
+/* Mobile — Figma spec: 402px viewport */
+@media (max-width: 576px) {
+
+
+
+    .clients-hero__title {
+        font-size: 60px;
+        line-height: 72px;
+        letter-spacing: 0;
+    }
+
+    .clients-section__title {
+        font-size: 50px;
+        line-height: 45px;
+        margin-bottom: 20px;
+    }
+
+    .clients-item__header {
+        padding: 14px 0;
+        padding-left: 19px;
+        padding-right: 0;
+    }
+
+    .clients-item__question {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .clients-item__icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .clients-item__icon-line--h {
+        width: 17.33px;
+        height: 2px;
+    }
+
+    .clients-item__icon-line--v {
+        width: 2px;
+        height: 17.33px;
+    }
+
+    .clients-item__answer {
+        padding-left: 19px;
+        padding-right: 19px;
+        padding-bottom: 20px;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.32px;
+    }
+
+    .clients-section {
+        padding-bottom: 24px;
+    }
+
+    .clients-text {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.32px;
+    }
+}
+
+/* Very small mobile */
+@media (max-width: 360px) {
+    .clients-hero__title {
+        font-size: 48px;
+        line-height: 58px;
+    }
+
+    .clients-section__title {
+        font-size: 40px;
+        line-height: 36px;
+    }
+}

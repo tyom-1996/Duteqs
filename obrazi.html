@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Образы Sergio Dallini — готовые стильные комплекты нательного белья для мужчин, женщин и детей." />
+    <title>Образы — Sergio Dallini</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Manrope:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/magazin.css" />
+    <link rel="stylesheet" href="css/obrazi.css" />
+</head>
+
+<body>
+    <!-- ===== HEADER + MOBILE MENU (loaded from component) ===== -->
+
+    <script src="js/header-component.js" data-theme="dark" data-modifier="magazin"></script>
+
+    <main>
+        <!-- ===== BREADCRUMBS ===== -->
+        <div class="breadcrumbs" id="breadcrumbs">
+            <a href="index.html" class="breadcrumbs__link">ГЛАВНАЯ</a>
+            <span class="breadcrumbs__dot"></span>
+            <a href="magazin.html" class="breadcrumbs__link">КАТАЛОГ</a>
+            <span class="breadcrumbs__dot breadcrumbs__dot--dark"></span>
+            <span class="breadcrumbs__current">ОБРАЗЫ</span>
+        </div>
+
+        <!-- ===== CATALOG FILTERS ===== -->
+        <div class="catalog-filters" id="catalog-filters">
+            <div class="catalog-filters__tabs" id="catalog-tabs">
+                <button class="catalog-filters__tab" data-filter="all" id="filter-all"
+                    onclick="window.location.href = 'magazin.html'">
+                    Все
+                </button>
+                <button class="catalog-filters__tab" data-filter="men" id="filter-men"
+                    onclick="window.location.href = 'magazin_men.html'">
+                    Мужчины
+                </button>
+                <button class="catalog-filters__tab" data-filter="women" id="filter-women"
+                    onclick="window.location.href = 'magazin_women.html'">
+                    Женщины
+                </button>
+                <button class="catalog-filters__tab" data-filter="kids" id="filter-kids"
+                    onclick="window.location.href = 'magazin_child.html'">
+                    Дети
+                </button>
+                <button class="catalog-filters__tab catalog-filters__tab--active" data-filter="looks" id="filter-looks">
+                    Образы
+                </button>
+            </div>
+
+            <div class="catalog-filters__subtabs">
+                <button class="catalog-filters__subtab catalog-filters__subtab--active">Все</button>
+                <button class="catalog-filters__subtab">Для нее</button>
+                <button class="catalog-filters__subtab">Для него</button>
+                <button class="catalog-filters__subtab">Детям</button>
+            </div>
+
+            <div class="catalog-filters__mobile-toggle">
+                <span>Фильтры (0)</span>
+            </div>
+        </div>
+
+        <!-- ===== LOOKS GRID ===== -->
+        <section class="looks-grid" id="looks-grid">
+            <!-- Look 1 -->
+            <div class="look-card" id="look-card-1">
+                <div class="look-card__image-wrapper">
+                    <img src="images/magazin_img1.webp" alt="Образ 1" class="look-card__image" />
+                </div>
+                <a href="obrazi_single.html" class="btn btn--solid-dark btn--full look-card__btn" id="look-btn-1">
+                    <span>Подробнее</span>
+                    <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
+                </a>
+            </div>
+
+            <!-- Look 2 -->
+            <div class="look-card" id="look-card-2">
+                <div class="look-card__image-wrapper">
+                    <img src="images/magazin_img2.webp" alt="Образ 2" class="look-card__image" />
+                </div>
+                <a href="obrazi_single.html" class="btn btn--solid-dark btn--full look-card__btn" id="look-btn-2">
+                    <span>Подробнее</span>
+                    <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
+                </a>
+            </div>
+
+            <!-- Look 3 -->
+            <div class="look-card" id="look-card-3">
+                <div class="look-card__image-wrapper">
+                    <img src="images/magazin_img3.webp" alt="Образ 3" class="look-card__image" />
+                </div>
+                <a href="obrazi_single.html" class="btn btn--solid-dark btn--full look-card__btn" id="look-btn-3">
+                    <span>Подробнее</span>
+                    <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
+                </a>
+            </div>
+
+            <!-- Look 4 -->
+            <div class="look-card" id="look-card-4">
+                <div class="look-card__image-wrapper">
+                    <img src="images/magazin_img4.webp" alt="Образ 4" class="look-card__image" />
+                </div>
+                <a href="obrazi_single.html" class="btn btn--solid-dark btn--full look-card__btn" id="look-btn-4">
+                    <span>Подробнее</span>
+                    <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
+                </a>
+            </div>
+
+            <!-- Look 5 -->
+            <div class="look-card" id="look-card-5">
+                <div class="look-card__image-wrapper">
+                    <img src="images/magazin_img5.webp" alt="Образ 5" class="look-card__image" />
+                </div>
+                <a href="obrazi_single.html" class="btn btn--solid-dark btn--full look-card__btn" id="look-btn-5">
+                    <span>Подробнее</span>
+                    <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
+                </a>
+            </div>
+
+            <!-- Look 6 -->
+            <div class="look-card" id="look-card-6">
+                <div class="look-card__image-wrapper">
+                    <img src="images/magazin_img6.webp" alt="Образ 6" class="look-card__image" />
+                </div>
+                <a href="obrazi_single.html" class="btn btn--solid-dark btn--full look-card__btn" id="look-btn-6">
+                    <span>Подробнее</span>
+                    <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
+                </a>
+            </div>
+
+            <!-- Look 7 -->
+            <div class="look-card" id="look-card-7">
+                <div class="look-card__image-wrapper">
+                    <img src="images/magazin_img7.webp" alt="Образ 7" class="look-card__image" />
+                </div>
+                <a href="obrazi_single.html" class="btn btn--solid-dark btn--full look-card__btn" id="look-btn-7">
+                    <span>Подробнее</span>
+                    <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
+                </a>
+            </div>
+
+            <!-- Look 8 -->
+            <div class="look-card" id="look-card-8">
+                <div class="look-card__image-wrapper">
+                    <img src="images/magazin_img8.webp" alt="Образ 8" class="look-card__image" />
+                </div>
+                <a href="obrazi_single.html" class="btn btn--solid-dark btn--full look-card__btn" id="look-btn-8">
+                    <span>Подробнее</span>
+                    <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
+                </a>
+            </div>
+        </section>
+
+        <div class="looks-load-more" id="looks-load-more">
+            <button class="btn btn--solid-dark looks-load-more__btn">
+                <span>Показать еще</span>
+            </button>
+        </div>
+
+        <!-- ===== NEWSLETTER (loaded from component) ===== -->
+
+        <script src="js/newsletter-component.js"></script>
+    </main>
+
+    <!-- ===== FOOTER (loaded from component) ===== -->
+    <script src="js/footer-component.js"></script>
+
+    <script src="js/header.js"></script>
+    <script src="js/newsletter.js"></script>
+    <script>
+        // Catalog filter tabs
+        const tabs = document.querySelectorAll(".catalog-filters__tab");
+        tabs.forEach((tab) => {
+            tab.addEventListener("click", () => {
+                tabs.forEach((t) =>
+                    t.classList.remove("catalog-filters__tab--active"),
+                );
+                tab.classList.add("catalog-filters__tab--active");
+            });
+        });
+
+        // Look card hover effect
+        document.querySelectorAll(".look-card").forEach((card) => {
+            card.addEventListener("mouseenter", () => {
+                card.classList.add("look-card--hover");
+            });
+            card.addEventListener("mouseleave", () => {
+                card.classList.remove("look-card--hover");
+            });
+        });
+
+        // Load More functionality for Looks Grid
+        const lookCards = document.querySelectorAll(".look-card");
+        const loadMoreBtn = document.querySelector(".looks-load-more__btn");
+        const loadMoreWrapper = document.getElementById("looks-load-more");
+        let initialCardsToShow = 4;
+
+        // Hide cards initially
+        lookCards.forEach((card, index) => {
+            if (index >= initialCardsToShow) {
+                card.style.display = "none";
+            }
+        });
+
+        if (lookCards.length <= initialCardsToShow && loadMoreWrapper) {
+            loadMoreWrapper.style.display = "none";
+        }
+
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener("click", () => {
+                lookCards.forEach(card => {
+                    card.style.display = "flex"; // Reset back to flex
+                });
+
+                // Hide the load more wrapper entirely instead of just button
+                if (loadMoreWrapper) {
+                    loadMoreWrapper.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

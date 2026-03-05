@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Клиентам — информация о доставке и оплате в Sergio Dallini. Узнайте условия доставки и способы оплаты." />
+    <title>Клиентам — Sergio Dallini</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Manrope:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/clients.css" />
+</head>
+
+<body>
+    <!-- ===== HEADER + MOBILE MENU (loaded from component) ===== -->
+
+    <script src="js/header-component.js" data-theme="dark" data-modifier="magazin"></script>
+
+    <main>
+        <!-- ===== CLIENTS HERO TITLE ===== -->
+        <section class="clients-hero" id="clients-hero">
+            <h1 class="clients-hero__title">Клиентам</h1>
+        </section>
+
+        <!-- ===== DELIVERY SECTION ===== -->
+        <section class="clients-section" id="clients-delivery">
+            <h2 class="clients-section__title">Доставка</h2>
+
+            <div class="clients-accordion" id="delivery-accordion">
+                <!-- Delivery Item 1 -->
+                <div class="clients-item" id="delivery-item-1">
+                    <button class="clients-item__header" id="delivery-btn-1" aria-expanded="false"
+                        aria-controls="delivery-content-1">
+                        <span class="clients-item__question">Доставка 1</span>
+                        <div class="clients-item__icon" aria-hidden="true">
+                            <span class="clients-item__icon-line clients-item__icon-line--h"></span>
+                            <span class="clients-item__icon-line clients-item__icon-line--v"></span>
+                        </div>
+                    </button>
+                    <div class="clients-item__content" id="delivery-content-1" role="region"
+                        aria-labelledby="delivery-btn-1">
+                        <div class="clients-item__answer">
+                            Доставка по Москве осуществляется в течение 1-2 рабочих дней курьерской службой.
+                            Стоимость доставки по Москве — 350 рублей. При заказе от 5 000 рублей доставка бесплатна.
+                            Курьер свяжется с вами за час до доставки для уточнения времени. Вы можете выбрать удобный
+                            интервал доставки: с 10:00 до 14:00, с 14:00 до 18:00 или с 18:00 до 22:00.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Delivery Item 2 -->
+                <div class="clients-item" id="delivery-item-2">
+                    <button class="clients-item__header" id="delivery-btn-2" aria-expanded="false"
+                        aria-controls="delivery-content-2">
+                        <span class="clients-item__question">Доставка 2</span>
+                        <div class="clients-item__icon" aria-hidden="true">
+                            <span class="clients-item__icon-line clients-item__icon-line--h"></span>
+                            <span class="clients-item__icon-line clients-item__icon-line--v"></span>
+                        </div>
+                    </button>
+                    <div class="clients-item__content" id="delivery-content-2" role="region"
+                        aria-labelledby="delivery-btn-2">
+                        <div class="clients-item__answer">
+                            Доставка по России осуществляется транспортными компаниями СДЭК, Boxberry и Почтой России.
+                            Сроки доставки составляют от 3 до 7 рабочих дней в зависимости от региона. Стоимость
+                            рассчитывается автоматически при оформлении заказа. При заказе от 10 000 рублей доставка
+                            по России бесплатна.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Delivery Item 3 -->
+                <div class="clients-item" id="delivery-item-3">
+                    <button class="clients-item__header" id="delivery-btn-3" aria-expanded="false"
+                        aria-controls="delivery-content-3">
+                        <span class="clients-item__question">Доставка 3</span>
+                        <div class="clients-item__icon" aria-hidden="true">
+                            <span class="clients-item__icon-line clients-item__icon-line--h"></span>
+                            <span class="clients-item__icon-line clients-item__icon-line--v"></span>
+                        </div>
+                    </button>
+                    <div class="clients-item__content" id="delivery-content-3" role="region"
+                        aria-labelledby="delivery-btn-3">
+                        <div class="clients-item__answer">
+                            Самовывоз доступен из наших фирменных магазинов и пунктов выдачи партнёрских служб доставки.
+                            Заказ будет готов к выдаче в течение 1 рабочего дня после подтверждения. Вы получите
+                            SMS-уведомление, когда заказ можно будет забрать. Срок хранения заказа в пункте выдачи —
+                            7 календарных дней.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Delivery Item 4 -->
+                <div class="clients-item" id="delivery-item-4">
+                    <button class="clients-item__header" id="delivery-btn-4" aria-expanded="false"
+                        aria-controls="delivery-content-4">
+                        <span class="clients-item__question">Доставка 4</span>
+                        <div class="clients-item__icon" aria-hidden="true">
+                            <span class="clients-item__icon-line clients-item__icon-line--h"></span>
+                            <span class="clients-item__icon-line clients-item__icon-line--v"></span>
+                        </div>
+                    </button>
+                    <div class="clients-item__content" id="delivery-content-4" role="region"
+                        aria-labelledby="delivery-btn-4">
+                        <div class="clients-item__answer">
+                            Международная доставка осуществляется в страны СНГ и Европы. Сроки доставки — от 7 до 14
+                            рабочих дней. Стоимость рассчитывается индивидуально в зависимости от страны назначения
+                            и веса посылки. Для уточнения условий международной доставки свяжитесь с нашей службой
+                            поддержки.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PAYMENT SECTION ===== -->
+        <section class="clients-section" id="clients-payment">
+            <h2 class="clients-section__title">Оплата</h2>
+
+            <p class="clients-text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an uLorem Ipsum is simply dummy text of the
+                printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                the
+                1500s, when an uLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                has been the industry's standard dummy text ever since the 1500s, when an uLorem Ipsum is simply dummy
+                text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                ever since the 1500s, when an uLorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an uLorem
+                Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an uLorem Ipsum is simply dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                an uLorem Ipsum is simply dummy text of the
+            </p>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER (loaded from component) ===== -->
+    <script src="js/footer-component.js"></script>
+
+    <script src="js/header.js"></script>
+    <script>
+        // ===== DELIVERY ACCORDION TOGGLE =====
+        const clientsItems = document.querySelectorAll(".clients-item");
+
+        clientsItems.forEach((item) => {
+            const btn = item.querySelector(".clients-item__header");
+            const content = item.querySelector(".clients-item__content");
+
+            btn.addEventListener("click", () => {
+                const isOpen = item.classList.contains("clients-item--open");
+
+                // Close all other items
+                clientsItems.forEach((otherItem) => {
+                    if (otherItem !== item && otherItem.classList.contains("clients-item--open")) {
+                        otherItem.classList.remove("clients-item--open");
+                        otherItem.querySelector(".clients-item__header").setAttribute("aria-expanded", "false");
+                        const otherContent = otherItem.querySelector(".clients-item__content");
+                        otherContent.style.maxHeight = null;
+                    }
+                });
+
+                // Toggle current item
+                if (isOpen) {
+                    item.classList.remove("clients-item--open");
+                    btn.setAttribute("aria-expanded", "false");
+                    content.style.maxHeight = null;
+                } else {
+                    item.classList.add("clients-item--open");
+                    btn.setAttribute("aria-expanded", "true");
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
