@@ -33,7 +33,7 @@
                 </div>
                 <p class="newsletter__text">Нравится наш бренд? Подпишись на нашу e-mail рассылку, чтобы получать
                     информацию о новых коллекциях, обновлениях и особых мероприятиях.</p>
-                <form class="newsletter__form" id="newsletter-form">
+                <form class="newsletter__form" id="newsletter-form" novalidate>
                     <div class="newsletter__input-group">
                         <input type="text" name="name" class="newsletter__input" id="newsletter-name" placeholder="Имя"
                             required>

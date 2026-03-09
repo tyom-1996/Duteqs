@@ -13,6 +13,21 @@
         document.head.appendChild(link);
     }
 
+    // Inject Swiper CSS (if not already on the page)
+    if (!document.querySelector('link[href*="swiper"]')) {
+        const swiperCSS = document.createElement('link');
+        swiperCSS.rel = 'stylesheet';
+        swiperCSS.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
+        document.head.appendChild(swiperCSS);
+    }
+
+    // Inject Swiper JS (if not already on the page)
+    if (!document.querySelector('script[src*="swiper"]')) {
+        const swiperJS = document.createElement('script');
+        swiperJS.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+        document.head.appendChild(swiperJS);
+    }
+
     const script = document.currentScript;
     const theme = script.getAttribute('data-theme') || 'dark';
     const modifier = script.getAttribute('data-modifier') || '';
@@ -39,6 +54,20 @@
     const searchBarHTML = `<div class="header__search-bar" id="search-bar">
             <input type="text" class="header__search-input" id="search-input" placeholder="Введите запрос">
            </div>`;
+
+    // Slider images for mobile menu
+    const menuSliderImages = [
+        'images/modal_img.webp',
+        'images/img1.webp',
+        'images/img2.webp'
+    ];
+
+    // Build Swiper slides
+    const slidesHTML = menuSliderImages.map(src =>
+        `<div class="swiper-slide">
+                    <img src="${src}" alt="" class="mobile-menu__img">
+                </div>`
+    ).join('');
 
     // ===== HEADER HTML =====
     const headerHTML = `
@@ -87,13 +116,13 @@
             <button class="mobile-menu__close" id="mobile-menu-close" aria-label="Закрыть меню">
                 <img src="svg/close.svg" alt="Закрыть" width="24" height="24">
             </button>
-            <div class="mobile-menu__image">
-                <img src="images/modal_img.webp" alt="" class="mobile-menu__img">
+            <div class="mobile-menu__image swiper" id="mobile-menu-swiper">
+                <div class="swiper-wrapper">
+                    ${slidesHTML}
+                </div>
                 <div class="mobile-menu__image-overlay"></div>
                 <div class="mobile-menu__dots">
-                    <span class="mobile-menu__dot mobile-menu__dot--active"></span>
-                    <span class="mobile-menu__dot"></span>
-                    <span class="mobile-menu__dot"></span>
+                    <div class="swiper-pagination" id="mobile-menu-pagination"></div>
                 </div>
             </div>
         </div>

@@ -128,7 +128,7 @@
 }
 
 .catalog-filters__subtab:hover {
-  opacity: 0.7;
+  /* opacity: 0.7; */
 }
 
 .catalog-filters__tabs {
@@ -187,7 +187,7 @@
 }
 
 .catalog-filters__filter-btn:hover {
-  opacity: 0.6;
+  /* opacity: 0.6; */
 }
 
 /* ======================================================
@@ -203,42 +203,33 @@
 }
 
 /* ======================================================
-   PRODUCT CARD
+   CATALOG LOOK CARD (reuses .look-card from style.css)
    ====================================================== */
-.product-card {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.product-card__link {
+/* Catalog-grid specific: wrap link around image */
+.catalog-grid .look-card__link {
   display: block;
   text-decoration: none;
   color: inherit;
 }
 
-.product-card__image-wrapper {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 455 / 570;
-  overflow: hidden;
-  background: #f0f0f0;
+/* Product info overlay — always visible on catalog cards */
+.catalog-grid .look-card__info {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 2;
 }
 
-.product-card__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform var(--transition-slow);
-}
-
-.product-card:hover .product-card__image {
-  transform: scale(1.05);
-}
-
-/* "В корзину" button inherits from .btn--solid-dark .btn--full in style.css */
-.product-card .btn--full {
-  margin-top: 10px;
+/* Subtle gradient at bottom of image for text readability */
+.catalog-grid .look-card__image-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.35) 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* ======================================================
@@ -293,6 +284,31 @@
 
 /* Tablet Portrait */
 @media (max-width: 768px) {
+  .catalog-filters__left {
+    gap: 10px !important;
+  }
+
+  .catalog-filters__tabs {
+    margin-bottom: unset !important;
+  }
+
+  .filter-popup__sort-links {
+    margin-top: 6px !important;
+  }
+
+  .filter-popup__section-title {
+    margin-bottom: 2px !important;
+  }
+
+  .filter-popup__sort-links {
+    gap: unset !important;
+  }
+
+  .filter-popup__accordion-body {
+    padding-top: unset !important;
+    gap: 6px !important;
+  }
+
   .catalog-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -377,13 +393,9 @@
     margin-top: 5px;
   }
 
-  .catalog-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding-bottom: 40px;
-  }
 
-  .product-card .btn--full {
+
+  .look-card .btn--full {
     font-size: 18px;
     line-height: 18px;
     height: 36px;
@@ -392,7 +404,7 @@
 }
 
 /* Very small mobile */
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .catalog-grid {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -455,7 +467,7 @@
 
 .filter-popup__title {
   color: var(--color-dark);
-  font-size: 20px;
+  font-size: 18px;
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 20px;
@@ -489,7 +501,7 @@
 
 .filter-popup__section-title {
   color: var(--color-dark);
-  font-size: 18px;
+  font-size: 16px;
   font-family: var(--font-body);
   font-weight: 500;
   line-height: 23.4px;
@@ -538,7 +550,7 @@
 
 .filter-popup__sort-text {
   color: var(--color-dark);
-  font-size: 18px;
+  font-size: 16px;
   font-family: var(--font-body);
   font-weight: 400;
   line-height: 23.4px;
@@ -587,7 +599,7 @@
   justify-content: space-between;
   width: 100%;
   color: var(--color-dark);
-  font-size: 18px;
+  font-size: 16px;
   font-family: var(--font-body);
   font-weight: 400;
   line-height: 23.4px;
@@ -772,15 +784,14 @@
   padding: 16px 20px;
   cursor: pointer;
   border: none;
-  font-size: 18px;
+  font-size: 16px !important;
   font-family: var(--font-body);
   font-weight: 400;
   line-height: 23.4px;
   letter-spacing: 0.36px;
   flex: 1;
   transition:
-    opacity var(--transition-base),
-    background var(--transition-base);
+    opacity var(--transition-base);
 }
 
 .filter-popup__btn--clear {
@@ -801,4 +812,55 @@
 
 .filter-popup__btn--apply:hover {
   background: #C3C3C3;
+}
+
+
+@media (max-width: 480px) {
+  .filter-popup__section-title {
+    font-size: 14px !important;
+  }
+
+  .filter-popup__sort-text {
+    font-size: 14px !important;
+  }
+
+  .filter-popup__btn {
+    font-size: 14px !important;
+    padding: 14px 6px !important;
+  }
+
+  .filter-popup__color-text {
+    font-size: 14px !important;
+  }
+
+  .filter-popup__accordion-btn {
+    font-size: 14px !important;
+  }
+
+  .filter-popup__sort-link {
+    font-size: 14px !important;
+  }
+
+  .filter-popup__sort-label:first-of-type img {
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: 5px !important;
+  }
+
+  .filter-popup__sort-label:nth-of-type(2) img {
+    width: 14px !important;
+    height: 17px !important;
+    margin-left: 5px !important;
+  }
+
+  .filter-popup__header {
+    padding: 15px !important;
+  }
+}
+
+@media (max-width: 338px) {
+  .filter-popup__btn {
+    font-size: 12px !important;
+    padding: 14px 6px !important;
+  }
 }

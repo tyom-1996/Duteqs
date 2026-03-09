@@ -14,6 +14,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart-popup.css">
 </head>
 
 <body>
@@ -27,19 +28,20 @@
         <!-- ===== HERO SECTION ===== -->
         <section class="hero" id="hero">
             <div class="hero__overlay">
-                <img src="svg/sergio-dallini-hero.svg" alt="Sergio Dallini" class="hero__overlay-logo">
+
             </div>
             <img src="images/img1.webp" alt="Sergio Dallini — итальянское нательное белье" class="hero__bg">
             <div class="hero__content">
                 <p class="hero__subtitle">Итальянский бренд с долгой историей. Занимаемся производством лучшего
                     нательного белья более 13 лет, чтобы дарить комфорт вам и вашему телу!</p>
             </div>
+            <div class="brand-strip" id="brand-strip">
+                <h1 class="brand-strip__title">SERGIO DALLINI</h1>
+            </div>
         </section>
 
         <!-- ===== WHITE BANNER STRIP ===== -->
-        <div class="brand-strip" id="brand-strip">
-            <img src="svg/brand-strip.svg" alt="Sergio Dallini" class="brand-strip__logo">
-        </div>
+
 
         <!-- ===== ABOUT SECTION ===== -->
         <section class="about" id="about">
@@ -65,8 +67,8 @@
                 <img src="images/img3.webp" alt="Коллекция для женщин" class="category-banner__bg">
                 <div class="category-banner__content">
                     <h2 class="category-banner__title cb-reveal">для женщин</h2>
-                    <a href="#" class="btn btn--outline-light btn--with-icon cb-reveal cb-reveal--delay"
-                        id="women-details-btn">
+                    <a href="magazin_women.html"
+                        class="btn btn--outline-light btn--with-icon cb-reveal cb-reveal--delay" id="women-details-btn">
                         <span>Подробнее</span>
                         <img src="svg/arrow-up-right-light.svg" alt="" width="18" height="18">
                     </a>
@@ -78,7 +80,7 @@
                 <img src="images/for_men_img.webp" alt="Коллекция для мужчин" class="category-banner__bg">
                 <div class="category-banner__content">
                     <h2 class="category-banner__title cb-reveal">для мужчин</h2>
-                    <a href="#" class="btn btn--outline-light btn--with-icon cb-reveal cb-reveal--delay"
+                    <a href="magazin_men.html" class="btn btn--outline-light btn--with-icon cb-reveal cb-reveal--delay"
                         id="men-details-btn">
                         <span>Подробнее</span>
                         <img src="svg/arrow-up-right-light.svg" alt="" width="18" height="18">
@@ -91,7 +93,8 @@
                 <img src="images/for_child.webp" alt="Коллекция для детей" class="category-banner__bg">
                 <div class="category-banner__content">
                     <h2 class="category-banner__title cb-reveal">для детей</h2>
-                    <a href="#" class="btn btn--outline-light btn--with-icon cb-reveal cb-reveal--delay"
+                    <a href="magazin_child.html"
+                        class="btn btn--outline-light btn--with-icon cb-reveal cb-reveal--delay"
                         id="children-details-btn">
                         <span>Подробнее</span>
                         <img src="svg/arrow-up-right-light.svg" alt="" width="18" height="18">
@@ -104,7 +107,7 @@
                 <img src="images/popular_examples.webp" alt="Популярные образы" class="category-banner__bg">
                 <div class="category-banner__content">
                     <h2 class="category-banner__title cb-reveal">популярные образы</h2>
-                    <a href="#" class="btn btn--outline-light btn--with-icon cb-reveal cb-reveal--delay"
+                    <a href="obrazi.html" class="btn btn--outline-light btn--with-icon cb-reveal cb-reveal--delay"
                         id="looks-details-btn">
                         <span>Подробнее</span>
                         <img src="svg/arrow-up-right-light.svg" alt="" width="18" height="18">
@@ -117,7 +120,7 @@
                 <img src="images/news.webp" alt="Новинки" class="category-banner__bg">
                 <div class="category-banner__content">
                     <h2 class="category-banner__title cb-reveal">новинки</h2>
-                    <a href="#" class="btn btn--outline-light btn--with-icon cb-reveal cb-reveal--delay"
+                    <a href="magazin.html" class="btn btn--outline-light btn--with-icon cb-reveal cb-reveal--delay"
                         id="news-details-btn">
                         <span>Подробнее</span>
                         <img src="svg/arrow-up-right-light.svg" alt="" width="18" height="18">
@@ -130,7 +133,7 @@
                 <img src="images/sale.webp" alt="Sale" class="category-banner__bg">
                 <div class="category-banner__content">
                     <h2 class="category-banner__title cb-reveal">sale</h2>
-                    <a href="#" class="btn btn--outline-light btn--with-icon cb-reveal cb-reveal--delay"
+                    <a href="magazin.html" class="btn btn--outline-light btn--with-icon cb-reveal cb-reveal--delay"
                         id="sale-details-btn">
                         <span>Подробнее</span>
                         <img src="svg/arrow-up-right-light.svg" alt="" width="18" height="18">
@@ -171,31 +174,62 @@
                                     <span class="look-card__price">00.00 Руб.</span>
                                 </div>
                             </div>
-                            <button class="btn btn--solid-dark btn--full" id="look-btn-1">Смотреть образ</button>
+                            <a href="obrazi_single.html" class="btn btn--solid-dark btn--full btn--with-icon"
+                                id="look-btn-1">
+                                <span>Подробнее</span>
+                                <img src="svg/arrow-up-right-light.svg" alt="" width="18" height="18">
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="look-card" id="look-card-2">
                             <div class="look-card__image-wrapper">
                                 <img src="images/img6.webp" alt="Образ 2" class="look-card__image">
+                                <div class="look-card__overlay"></div>
+                                <div class="look-card__info">
+                                    <span class="look-card__name">Название</span>
+                                    <span class="look-card__price">00.00 Руб.</span>
+                                </div>
                             </div>
-                            <button class="btn btn--solid-dark btn--full" id="look-btn-2">Смотреть образ</button>
+                            <a href="obrazi_single.html" class="btn btn--solid-dark btn--full btn--with-icon"
+                                id="look-btn-2">
+                                <span>Подробнее</span>
+                                <img src="svg/arrow-up-right-light.svg" alt="" width="18" height="18">
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="look-card" id="look-card-3">
                             <div class="look-card__image-wrapper">
                                 <img src="images/img7.webp" alt="Образ 3" class="look-card__image">
+                                <div class="look-card__overlay"></div>
+                                <div class="look-card__info">
+                                    <span class="look-card__name">Название</span>
+                                    <span class="look-card__price">00.00 Руб.</span>
+                                </div>
                             </div>
-                            <button class="btn btn--solid-dark btn--full" id="look-btn-3">Смотреть образ</button>
+                            <a href="obrazi_single.html" class="btn btn--solid-dark btn--full btn--with-icon"
+                                id="look-btn-3">
+                                <span>Подробнее</span>
+                                <img src="svg/arrow-up-right-light.svg" alt="" width="18" height="18">
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="look-card" id="look-card-4">
                             <div class="look-card__image-wrapper">
                                 <img src="images/img8.webp" alt="Образ 4" class="look-card__image">
+                                <div class="look-card__overlay"></div>
+                                <div class="look-card__info">
+                                    <span class="look-card__name">Название</span>
+                                    <span class="look-card__price">00.00 Руб.</span>
+                                </div>
                             </div>
-                            <button class="btn btn--solid-dark btn--full" id="look-btn-4">Смотреть образ</button>
+                            <a href="obrazi_single.html" class="btn btn--solid-dark btn--full btn--with-icon"
+                                id="look-btn-4">
+                                <span>Подробнее</span>
+                                <img src="svg/arrow-up-right-light.svg" alt="" width="18" height="18">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -206,8 +240,11 @@
 
         <!-- ===== PROMO BANNER ===== -->
         <section class="promo-banner" id="promo-banner">
-            <div class="promo-banner__overlay"></div>
-            <img src="images/img9.webp" alt="Дорогой комфорт — дешево!" class="promo-banner__bg">
+            <div class="promo-banner__overlay">
+                <img src="images/img9.webp" alt="Дорогой комфорт — дешево!" class="promo-banner__bg">
+                <img src="images/comfort_photo.webp" alt="Дорогой комфорт — дешево!" class="promo-banner__bg_mobile">
+            </div>
+
             <div class="promo-banner__content">
                 <h2 class="promo-banner__title">Дорогой комфорт - дешево!</h2>
             </div>
@@ -224,6 +261,7 @@
 
     <script src="js/header.js"></script>
     <script src="js/newsletter.js"></script>
+    <script src="js/cart-popup.js"></script>
     <script>
         // Video play/pause
         const brandVideo = document.getElementById('brand-video');

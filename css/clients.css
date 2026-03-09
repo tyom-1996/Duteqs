@@ -44,14 +44,14 @@
    CLIENTS HERO — Large Title "КЛИЕНТАМ"
    ====================================================== */
 .clients-hero {
-    padding: 75px var(--container-padding) 40px;
+    padding: 55px var(--container-padding) 40px;
     max-width: 1920px;
     margin: 0 auto;
 }
 
 .clients-hero__title {
     color: #0B0B0B;
-    font-size: clamp(120px, 14.3vw, 274px);
+    font-size: clamp(120px, 14.3vw, 200px);
     font-family: var(--font-heading);
     font-weight: 700;
     text-transform: uppercase;
@@ -71,7 +71,7 @@
 
 .clients-section__title {
     color: #0B0B0B;
-    font-size: clamp(48px, 4.7vw, 90px);
+    font-size: clamp(48px, 4.7vw, 55%);
     font-family: var(--font-heading);
     font-weight: 700;
     text-transform: uppercase;
@@ -90,11 +90,11 @@
 
 /* ---- Individual Delivery Item ---- */
 .clients-item {
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-top: 1px solid #0B0B0B;
 }
 
 .clients-item:last-child {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid #0B0B0B;
 }
 
 /* ---- Item Header (clickable) ---- */
@@ -103,7 +103,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 24px 0;
+    padding: 14px 0;
     padding-left: 19px;
     padding-right: 0;
     background: none;
@@ -114,7 +114,7 @@
 }
 
 .clients-item__header:hover {
-    opacity: 0.7;
+    /* opacity: 0.7; */
 }
 
 .clients-item__question {
@@ -269,13 +269,10 @@
 /* Tablet Portrait */
 @media (max-width: 768px) {
     .clients-section {
-        margin-bottom: 100px;
+        margin-bottom: 40px;
     }
 
-    .clients-hero {
-        padding-top: 80px;
-        padding-bottom: 50px;
-    }
+
 
     .clients-hero__title {
         font-size: clamp(60px, 12vw, 120px);
@@ -338,11 +335,11 @@
         letter-spacing: 0;
     }
 
-    .clients-section__title {
+    /* .clients-section__title {
         font-size: 50px;
         line-height: 45px;
         margin-bottom: 20px;
-    }
+    } */
 
     .clients-item__header {
         padding: 14px 0;

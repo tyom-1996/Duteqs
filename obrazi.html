@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/magazin.css" />
     <link rel="stylesheet" href="css/obrazi.css" />
+    <link rel="stylesheet" href="css/cart-popup.css" />
 </head>
 
 <body>
@@ -28,39 +29,43 @@
             <a href="index.html" class="breadcrumbs__link">ГЛАВНАЯ</a>
             <span class="breadcrumbs__dot"></span>
             <a href="magazin.html" class="breadcrumbs__link">КАТАЛОГ</a>
-            <span class="breadcrumbs__dot breadcrumbs__dot--dark"></span>
+            <span class="breadcrumbs__dot"></span>
             <span class="breadcrumbs__current">ОБРАЗЫ</span>
         </div>
 
         <!-- ===== CATALOG FILTERS ===== -->
         <div class="catalog-filters" id="catalog-filters">
-            <div class="catalog-filters__tabs" id="catalog-tabs">
-                <button class="catalog-filters__tab" data-filter="all" id="filter-all"
-                    onclick="window.location.href = 'magazin.html'">
-                    Все
-                </button>
-                <button class="catalog-filters__tab" data-filter="men" id="filter-men"
-                    onclick="window.location.href = 'magazin_men.html'">
-                    Мужчины
-                </button>
-                <button class="catalog-filters__tab" data-filter="women" id="filter-women"
-                    onclick="window.location.href = 'magazin_women.html'">
-                    Женщины
-                </button>
-                <button class="catalog-filters__tab" data-filter="kids" id="filter-kids"
-                    onclick="window.location.href = 'magazin_child.html'">
-                    Дети
-                </button>
-                <button class="catalog-filters__tab catalog-filters__tab--active" data-filter="looks" id="filter-looks">
-                    Образы
-                </button>
-            </div>
+            <div class="catalog-filters__left">
+                <div class="catalog-filters__tabs" id="catalog-tabs">
+                    <button class="catalog-filters__tab" data-filter="all" id="filter-all"
+                        onclick="window.location.href = 'magazin.html'">
+                        Все
+                    </button>
+                    <button class="catalog-filters__tab" data-filter="men" id="filter-men"
+                        onclick="window.location.href = 'magazin_men.html'">
+                        Мужчины
+                    </button>
+                    <button class="catalog-filters__tab" data-filter="women" id="filter-women"
+                        onclick="window.location.href = 'magazin_women.html'">
+                        Женщины
+                    </button>
+                    <button class="catalog-filters__tab" data-filter="kids" id="filter-kids"
+                        onclick="window.location.href = 'magazin_child.html'">
+                        Дети
+                    </button>
+                    <button class="catalog-filters__tab catalog-filters__tab--active" data-filter="looks"
+                        id="filter-looks">
+                        Образы
+                    </button>
+                </div>
 
-            <div class="catalog-filters__subtabs">
-                <button class="catalog-filters__subtab catalog-filters__subtab--active">Все</button>
-                <button class="catalog-filters__subtab">Для нее</button>
-                <button class="catalog-filters__subtab">Для него</button>
-                <button class="catalog-filters__subtab">Детям</button>
+                <div class="catalog-filters__subtabs" id="catalog-subtabs">
+                    <button class="catalog-filters__subtab catalog-filters__subtab--active"
+                        data-category="all">Все</button>
+                    <button class="catalog-filters__subtab" data-category="women">Для нее</button>
+                    <button class="catalog-filters__subtab" data-category="men">Для него</button>
+                    <button class="catalog-filters__subtab" data-category="kids">Детям</button>
+                </div>
             </div>
 
             <div class="catalog-filters__mobile-toggle">
@@ -71,10 +76,10 @@
         <!-- ===== LOOKS GRID ===== -->
         <section class="looks-grid" id="looks-grid">
             <!-- Look 1 -->
-            <div class="look-card" id="look-card-1">
-                <div class="look-card__image-wrapper">
+            <div class="look-card" data-category="women" id="look-card-1">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
                     <img src="images/magazin_img1.webp" alt="Образ 1" class="look-card__image" />
-                </div>
+                </a>
                 <a href="obrazi_single.html" class="btn btn--solid-dark btn--full look-card__btn" id="look-btn-1">
                     <span>Подробнее</span>
                     <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
@@ -82,10 +87,10 @@
             </div>
 
             <!-- Look 2 -->
-            <div class="look-card" id="look-card-2">
-                <div class="look-card__image-wrapper">
+            <div class="look-card" data-category="men" id="look-card-2">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
                     <img src="images/magazin_img2.webp" alt="Образ 2" class="look-card__image" />
-                </div>
+                </a>
                 <a href="obrazi_single.html" class="btn btn--solid-dark btn--full look-card__btn" id="look-btn-2">
                     <span>Подробнее</span>
                     <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
@@ -93,10 +98,10 @@
             </div>
 
             <!-- Look 3 -->
-            <div class="look-card" id="look-card-3">
-                <div class="look-card__image-wrapper">
+            <div class="look-card" data-category="men" id="look-card-3">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
                     <img src="images/magazin_img3.webp" alt="Образ 3" class="look-card__image" />
-                </div>
+                </a>
                 <a href="obrazi_single.html" class="btn btn--solid-dark btn--full look-card__btn" id="look-btn-3">
                     <span>Подробнее</span>
                     <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
@@ -104,10 +109,10 @@
             </div>
 
             <!-- Look 4 -->
-            <div class="look-card" id="look-card-4">
-                <div class="look-card__image-wrapper">
+            <div class="look-card" data-category="women" id="look-card-4">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
                     <img src="images/magazin_img4.webp" alt="Образ 4" class="look-card__image" />
-                </div>
+                </a>
                 <a href="obrazi_single.html" class="btn btn--solid-dark btn--full look-card__btn" id="look-btn-4">
                     <span>Подробнее</span>
                     <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
@@ -115,10 +120,10 @@
             </div>
 
             <!-- Look 5 -->
-            <div class="look-card" id="look-card-5">
-                <div class="look-card__image-wrapper">
+            <div class="look-card" data-category="men" id="look-card-5">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
                     <img src="images/magazin_img5.webp" alt="Образ 5" class="look-card__image" />
-                </div>
+                </a>
                 <a href="obrazi_single.html" class="btn btn--solid-dark btn--full look-card__btn" id="look-btn-5">
                     <span>Подробнее</span>
                     <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
@@ -126,10 +131,10 @@
             </div>
 
             <!-- Look 6 -->
-            <div class="look-card" id="look-card-6">
-                <div class="look-card__image-wrapper">
+            <div class="look-card" data-category="women" id="look-card-6">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
                     <img src="images/magazin_img6.webp" alt="Образ 6" class="look-card__image" />
-                </div>
+                </a>
                 <a href="obrazi_single.html" class="btn btn--solid-dark btn--full look-card__btn" id="look-btn-6">
                     <span>Подробнее</span>
                     <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
@@ -137,10 +142,10 @@
             </div>
 
             <!-- Look 7 -->
-            <div class="look-card" id="look-card-7">
-                <div class="look-card__image-wrapper">
+            <div class="look-card" data-category="men" id="look-card-7">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
                     <img src="images/magazin_img7.webp" alt="Образ 7" class="look-card__image" />
-                </div>
+                </a>
                 <a href="obrazi_single.html" class="btn btn--solid-dark btn--full look-card__btn" id="look-btn-7">
                     <span>Подробнее</span>
                     <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
@@ -148,14 +153,402 @@
             </div>
 
             <!-- Look 8 -->
-            <div class="look-card" id="look-card-8">
-                <div class="look-card__image-wrapper">
+            <div class="look-card" data-category="kids" id="look-card-8">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
                     <img src="images/magazin_img8.webp" alt="Образ 8" class="look-card__image" />
-                </div>
+                </a>
                 <a href="obrazi_single.html" class="btn btn--solid-dark btn--full look-card__btn" id="look-btn-8">
                     <span>Подробнее</span>
                     <img src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" />
                 </a>
+            </div>
+
+            <!-- Looks 9-56: duplicated items to create longread (50+ items before "Show more") -->
+            <div class="look-card" data-category="women" id="look-card-9">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img1.webp" alt="Образ 9" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="men" id="look-card-10">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img2.webp" alt="Образ 10" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="men" id="look-card-11">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img3.webp" alt="Образ 11" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="women" id="look-card-12">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img4.webp" alt="Образ 12" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="men" id="look-card-13">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img5.webp" alt="Образ 13" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="women" id="look-card-14">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img6.webp" alt="Образ 14" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="kids" id="look-card-15">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img7.webp" alt="Образ 15" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="women" id="look-card-16">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img8.webp" alt="Образ 16" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="men" id="look-card-17">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img1.webp" alt="Образ 17" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="women" id="look-card-18">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img2.webp" alt="Образ 18" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="kids" id="look-card-19">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img3.webp" alt="Образ 19" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="men" id="look-card-20">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img4.webp" alt="Образ 20" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="women" id="look-card-21">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img5.webp" alt="Образ 21" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="men" id="look-card-22">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img6.webp" alt="Образ 22" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="kids" id="look-card-23">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img7.webp" alt="Образ 23" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="women" id="look-card-24">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img8.webp" alt="Образ 24" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="men" id="look-card-25">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img1.webp" alt="Образ 25" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="women" id="look-card-26">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img2.webp" alt="Образ 26" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="men" id="look-card-27">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img3.webp" alt="Образ 27" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="kids" id="look-card-28">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img4.webp" alt="Образ 28" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="women" id="look-card-29">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img5.webp" alt="Образ 29" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="men" id="look-card-30">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img6.webp" alt="Образ 30" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="women" id="look-card-31">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img7.webp" alt="Образ 31" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="kids" id="look-card-32">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img8.webp" alt="Образ 32" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="men" id="look-card-33">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img1.webp" alt="Образ 33" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="women" id="look-card-34">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img2.webp" alt="Образ 34" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="men" id="look-card-35">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img3.webp" alt="Образ 35" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="women" id="look-card-36">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img4.webp" alt="Образ 36" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="kids" id="look-card-37">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img5.webp" alt="Образ 37" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="men" id="look-card-38">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img6.webp" alt="Образ 38" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="women" id="look-card-39">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img7.webp" alt="Образ 39" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="men" id="look-card-40">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img8.webp" alt="Образ 40" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="women" id="look-card-41">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img1.webp" alt="Образ 41" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="kids" id="look-card-42">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img2.webp" alt="Образ 42" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="men" id="look-card-43">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img3.webp" alt="Образ 43" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="women" id="look-card-44">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img4.webp" alt="Образ 44" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="men" id="look-card-45">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img5.webp" alt="Образ 45" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="women" id="look-card-46">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img6.webp" alt="Образ 46" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="kids" id="look-card-47">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img7.webp" alt="Образ 47" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="men" id="look-card-48">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img8.webp" alt="Образ 48" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="women" id="look-card-49">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img1.webp" alt="Образ 49" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="men" id="look-card-50">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img2.webp" alt="Образ 50" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+
+            <!-- Hidden items (51+), shown on "Load More" -->
+            <div class="look-card" data-category="women" id="look-card-51">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img3.webp" alt="Образ 51" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="men" id="look-card-52">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img4.webp" alt="Образ 52" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="kids" id="look-card-53">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img5.webp" alt="Образ 53" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="women" id="look-card-54">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img6.webp" alt="Образ 54" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="men" id="look-card-55">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img7.webp" alt="Образ 55" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
+            </div>
+            <div class="look-card" data-category="women" id="look-card-56">
+                <a href="obrazi_single.html" class="look-card__image-wrapper">
+                    <img src="images/magazin_img8.webp" alt="Образ 56" class="look-card__image" />
+                </a>
+                <a href="obrazi_single.html"
+                    class="btn btn--solid-dark btn--full look-card__btn"><span>Подробнее</span><img
+                        src="svg/arrow-up-right-white.svg" alt="" width="18" height="18" /></a>
             </div>
         </section>
 
@@ -175,6 +568,7 @@
 
     <script src="js/header.js"></script>
     <script src="js/newsletter.js"></script>
+    <script src="js/cart-popup.js"></script>
     <script>
         // Catalog filter tabs
         const tabs = document.querySelectorAll(".catalog-filters__tab");
@@ -197,35 +591,85 @@
             });
         });
 
-        // Load More functionality for Looks Grid
-        const lookCards = document.querySelectorAll(".look-card");
-        const loadMoreBtn = document.querySelector(".looks-load-more__btn");
-        const loadMoreWrapper = document.getElementById("looks-load-more");
-        let initialCardsToShow = 4;
+        // ========== SUBTAB FILTERING ==========
+        const subtabs = document.querySelectorAll(".catalog-filters__subtab");
+        const allLookCards = document.querySelectorAll(".look-card");
 
-        // Hide cards initially
-        lookCards.forEach((card, index) => {
-            if (index >= initialCardsToShow) {
-                card.style.display = "none";
-            }
+        function applyFilter(category) {
+            allLookCards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            // After filtering, re-apply load-more logic
+            applyLoadMore();
+        }
+
+        subtabs.forEach(subtab => {
+            subtab.addEventListener('click', () => {
+                subtabs.forEach(s => s.classList.remove('catalog-filters__subtab--active'));
+                subtab.classList.add('catalog-filters__subtab--active');
+                const category = subtab.dataset.category;
+                applyFilter(category);
+            });
         });
 
-        if (lookCards.length <= initialCardsToShow && loadMoreWrapper) {
-            loadMoreWrapper.style.display = "none";
+        // ========== LOAD MORE (after 50 visible items) ==========
+        const loadMoreBtn = document.querySelector(".looks-load-more__btn");
+        const loadMoreWrapper = document.getElementById("looks-load-more");
+        const ITEMS_BEFORE_LOAD_MORE = 50;
+
+        function applyLoadMore() {
+            const activeSubtab = document.querySelector('.catalog-filters__subtab--active');
+            const category = activeSubtab ? activeSubtab.dataset.category : 'all';
+
+            // Get only visible cards (matching current filter)
+            const visibleCards = Array.from(allLookCards).filter(card => {
+                return category === 'all' || card.dataset.category === category;
+            });
+
+            let visibleCount = 0;
+            visibleCards.forEach((card, index) => {
+                if (index < ITEMS_BEFORE_LOAD_MORE) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Show/hide "Load more" button based on whether there are more items
+            if (loadMoreWrapper) {
+                if (visibleCards.length > ITEMS_BEFORE_LOAD_MORE) {
+                    loadMoreWrapper.style.display = 'flex';
+                } else {
+                    loadMoreWrapper.style.display = 'none';
+                }
+            }
         }
 
         if (loadMoreBtn) {
             loadMoreBtn.addEventListener("click", () => {
-                lookCards.forEach(card => {
-                    card.style.display = "flex"; // Reset back to flex
+                // Show all cards matching current filter
+                const activeSubtab = document.querySelector('.catalog-filters__subtab--active');
+                const category = activeSubtab ? activeSubtab.dataset.category : 'all';
+
+                allLookCards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'flex';
+                    }
                 });
 
-                // Hide the load more wrapper entirely instead of just button
                 if (loadMoreWrapper) {
-                    loadMoreWrapper.style.display = "none";
+                    loadMoreWrapper.style.display = 'none';
                 }
             });
         }
+
+        // Initial load: apply load-more logic
+        applyLoadMore();
     </script>
 </body>
 

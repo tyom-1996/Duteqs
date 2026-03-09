@@ -4,7 +4,7 @@
 .newsletter {
     position: relative;
     width: 100%;
-    height: 750px;
+    height: 500px;
     overflow: hidden;
 }
 
@@ -26,16 +26,15 @@
 
 .newsletter__form-wrapper {
     position: absolute;
-    top: 27px;
+    top: 20px;
     left: var(--container-padding);
     width: 930px;
-    height: 703px;
+    height: 460px;
     background: var(--color-white);
     z-index: 1;
-    padding: 51px 20px 27px;
+    padding: 32px 20px 20px;
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--color-dark);
 }
 
 .newsletter__title-row {
@@ -46,24 +45,24 @@
 
 .newsletter__title {
     color: var(--color-dark);
-    font-size: 90px;
+    font-size: 56px;
     font-family: var(--font-heading);
     font-weight: 700;
     text-transform: uppercase;
-    line-height: 81px;
-    margin-bottom: 40px;
+    line-height: 52px;
+    margin-bottom: 20px;
     max-width: 541px;
 }
 
 .newsletter__text {
     color: var(--color-dark);
-    font-size: 18px;
-    font-family: var(--font-body);
+    font-size: 16px;
+    font-family: "Involve", sans-serif;
     font-weight: 400;
-    line-height: 23.4px;
+    line-height: 22px;
     letter-spacing: 0.36px;
     max-width: 580px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .newsletter__form {
@@ -74,8 +73,8 @@
 
 .newsletter__input-group {
     border-bottom: 1px solid black;
-    padding: 16px 10px;
-    margin-bottom: 10px;
+    padding: 12px 10px;
+    margin-bottom: 8px;
 }
 
 .newsletter__input {
@@ -94,6 +93,20 @@
     opacity: 0.3;
 }
 
+/* --- Error state --- */
+.newsletter__input-group--error {
+    border-bottom-color: #C60000;
+}
+
+.newsletter__input-group--error .newsletter__input {
+    color: #C60000;
+}
+
+.newsletter__input-group--error .newsletter__input::placeholder {
+    color: #C60000;
+    opacity: 1;
+}
+
 .newsletter__consent {
     display: flex;
     align-items: center;
@@ -110,7 +123,7 @@
     width: 12px;
     height: 12px;
     border-radius: 37px;
-    border: 1px solid var(--color-dark);
+    border: 1px solid #000000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,13 +140,13 @@
     width: 8px;
     height: 8px;
     border-radius: 37px;
-    background: var(--color-dark);
+    background: #000000;
 }
 
 .newsletter__consent-text {
     color: var(--color-dark);
     font-size: 12px;
-    font-family: var(--font-body);
+    font-family: "Involve", sans-serif;
     font-weight: 400;
     line-height: 18px;
     letter-spacing: 0.24px;
@@ -158,14 +171,6 @@
 /* ======================================================
    RESPONSIVE — Newsletter
    ====================================================== */
-
-/* Large Desktop (max-width: 1440px) */
-@media (max-width: 1440px) {
-    .newsletter__title {
-        font-size: 70px;
-        line-height: 65px;
-    }
-}
 
 /* Laptop / Small Desktop (max-width: 1200px) */
 @media (max-width: 1200px) {
@@ -199,6 +204,15 @@
 
 /* Tablet Portrait (max-width: 768px) */
 @media (max-width: 768px) {
+    .newsletter__consent-text {
+        width: 196px;
+    }
+
+    .newsletter__form-wrapper {
+        border: 1px solid var(--color-dark);
+        overflow: hidden;
+    }
+
     .newsletter__bg-image {
         height: 558px !important;
     }
@@ -232,20 +246,22 @@
 
     .newsletter__form-wrapper {
         position: absolute;
-        bottom: 0;
+        bottom: -140px;
         left: 0;
         width: 100%;
         height: auto;
         min-height: auto;
-        padding: 36px 20px 24px;
+        padding: 36px 20px 0;
         z-index: 2;
         transform: translateY(50%);
-        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+            padding 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
     .newsletter--expanded .newsletter__form-wrapper {
-        transform: translateY(130px);
+        transform: translateY(142px);
         height: 400px;
+        padding-bottom: 24px;
     }
 
     .newsletter__title {
@@ -259,11 +275,25 @@
     }
 
     .newsletter__text {
-        font-size: 15px;
-        line-height: 20px;
+        font-size: 14px;
+        line-height: 14px;
         letter-spacing: 0;
         max-width: 100%;
         margin-bottom: 24px;
+    }
+
+    /* --- Hide form by default, show only title + text --- */
+    .newsletter__form {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+            opacity 0.4s ease;
+    }
+
+    .newsletter--expanded .newsletter__form {
+        max-height: 500px;
+        opacity: 1;
     }
 
     .newsletter__input-group {
@@ -290,7 +320,6 @@
         letter-spacing: 0.36px;
         border-bottom: 1px solid var(--color-dark);
         padding: 2px;
-        /* margin-top: 0; */
     }
 
     /* ---------- NEWSLETTER SCROLL BTN ---------- */
@@ -327,6 +356,10 @@
 
 /* Mobile (max-width: 480px) */
 @media (max-width: 480px) {
+    .newsletter__form-wrapper {
+        bottom: -210px;
+    }
+
     .newsletter {
         min-height: auto;
     }
@@ -347,11 +380,7 @@
         max-width: 280px;
     }
 
-    .newsletter__text {
-        font-size: 13px;
-        line-height: 17px;
-        margin-bottom: 16px;
-    }
+
 
     .newsletter__input-group {
         padding: 10px 8px;
@@ -389,7 +418,7 @@
 
     .newsletter__text {
         font-size: 12px;
-        line-height: 16px;
+
     }
 
     .newsletter__scroll-btn {
@@ -406,7 +435,32 @@
 
 @media (max-width: 420px) {
     .newsletter--expanded .newsletter__form-wrapper {
-        transform: translateY(104px) !important;
+        transform: translateY(112px) !important;
         height: 430px !important;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .newsletter__form-wrapper {
+        bottom: -200px;
+    }
+}
+
+@media (max-width: 385px) {
+    .newsletter__form-wrapper {
+        bottom: -190px;
+    }
+}
+
+@media (max-width: 375px) {
+    .newsletter__form-wrapper {
+        bottom: -226px;
+    }
+}
+
+@media (max-width: 336px) {
+    .newsletter__form-wrapper {
+        bottom: -204px;
     }
 }

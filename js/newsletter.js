@@ -1,13 +1,38 @@
 // ===== NEWSLETTER FORM =====
 const newsletterForm = document.getElementById('newsletter-form');
 if (newsletterForm) {
+    const nameInput = document.getElementById('newsletter-name');
+    const emailInput = document.getElementById('newsletter-email');
+
+    // Clear error state on input
+    [nameInput, emailInput].forEach((input) => {
+        if (!input) return;
+        input.addEventListener('input', () => {
+            input.closest('.newsletter__input-group').classList.remove('newsletter__input-group--error');
+        });
+    });
+
     newsletterForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const name = document.getElementById('newsletter-name').value;
-        const email = document.getElementById('newsletter-email').value;
+
+        let hasError = false;
+
+        // Validate name
+        if (!nameInput.value.trim()) {
+            nameInput.closest('.newsletter__input-group').classList.add('newsletter__input-group--error');
+            hasError = true;
+        }
+
+        // Validate email
+        if (!emailInput.value.trim()) {
+            emailInput.closest('.newsletter__input-group').classList.add('newsletter__input-group--error');
+            hasError = true;
+        }
+
         const consent = document.getElementById('consent-checkbox').checked;
-        if (name && email && consent) {
-            alert('Спасибо за подписку, ' + name + '!');
+
+        if (!hasError && consent) {
+            alert('Спасибо за подписку, ' + nameInput.value + '!');
             newsletterForm.reset();
         }
     });

@@ -14,6 +14,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/cart-popup.css">
 </head>
 
 <body>
@@ -122,64 +123,64 @@
                     <div class="values__track" id="values-track">
                         <!-- Value 1 -->
                         <div class="values__item">
+                            <div class="values__item-image values__item-image--1">
+                                <img src="images/brend_img1.png" alt="Дорогой комфорт">
+                            </div>
                             <div class="values__item-label">
                                 <span class="values__item-num">01</span>
                                 <span class="values__item-name">Дорогой комфорт</span>
-                            </div>
-                            <div class="values__item-image">
-                                <picture>
-                                    <source media="(max-width: 576px)" srcset="images/about_brend_img5.webp">
-                                    <img src="images/about_brend_img5.webp" alt="Дорогой комфорт">
-                                </picture>
                             </div>
                         </div>
 
                         <!-- Value 2 -->
                         <div class="values__item">
+
+                            <div class="values__item-image values__item-image--2">
+                                <img src="images/brend_img2.png" alt="Стиль на каждый день">
+                            </div>
                             <div class="values__item-label">
                                 <span class="values__item-num">02</span>
                                 <span class="values__item-name">Стиль на каждый день</span>
                             </div>
-                            <div class="values__item-image">
-                                <picture>
-                                    <source media="(max-width: 576px)" srcset="images/about_brend_mobile_img5.webp">
-                                    <img src="images/about_brend_img6.webp" alt="Стиль на каждый день">
-                                </picture>
-                            </div>
                         </div>
 
-                        <!-- Value 3 -->
-                        <div class="values__item">
+                        <!-- Value 3: two images together -->
+                        <div class="values__item values__item--dual">
+
+                            <div class="values__item-images">
+                                <div class="values__item-image values__item-image--3a">
+                                    <img src="images/brend_img3.png" alt="Забота о теле">
+                                </div>
+                                <div class="values__item-image values__item-image--3b">
+                                    <img src="images/brend_img4.png" alt="Забота о теле">
+                                </div>
+                            </div>
                             <div class="values__item-label">
                                 <span class="values__item-num">03</span>
                                 <span class="values__item-name">Забота о теле</span>
                             </div>
-                            <div class="values__item-image">
-                                <picture>
-                                    <source media="(max-width: 576px)" srcset="images/about_brend_mobile_img6.webp">
-                                    <img src="images/about_brend_img1.webp" alt="Забота о теле">
-                                </picture>
-                            </div>
                         </div>
 
-                        <!-- Value 4 -->
-                        <div class="values__item">
-                            <div class="values__item-label">
-                                <span class="values__item-num">04</span>
-                                <span class="values__item-name">Твоя личная поддержка</span>
+                        <!-- Value 4: two images together -->
+                        <div class="values__item values__item--dual">
+
+                            <div class="values__item-images">
+                                <div class="values__item-image values__item-image--4a">
+                                    <img src="images/brend_img5.png" alt="Твоя личная поддержка">
+                                </div>
+
                             </div>
-                            <div class="values__item-image">
-                                <picture>
-                                    <source media="(max-width: 576px)" srcset="images/about_brend_mobile_img7.webp">
-                                    <img src="images/about_brend_img7.webp" alt="Твоя личная поддержка">
-                                </picture>
+                            <div class="values__item-images2">
+                                <div class="values__item-label2">
+                                    <span class="values__item-num">04</span>
+                                    <span class="values__item-name">Твоя личная поддержка</span>
+                                </div>
+                                <div class="values__item-image values__item-image--4b">
+                                    <img src="images/brend_img6.png" alt="Твоя личная поддержка">
+                                </div>
+
                             </div>
-                            <div class="values__item-image values__item-image--small">
-                                <picture>
-                                    <source media="(max-width: 576px)" srcset="images/about_brend_mobile_img8.webp">
-                                    <img src="images/about_brend_img2.webp" alt="Твоя личная поддержка">
-                                </picture>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -260,6 +261,7 @@
 
     <script src="js/header.js"></script>
     <script src="js/newsletter.js"></script>
+    <script src="js/cart-popup.js"></script>
     <script>
         // ===== Production Slider (Scroll-Driven Clip-Path Reveal) =====
         const productionSection = document.getElementById('production');
@@ -345,38 +347,46 @@
         window.addEventListener('scroll', handleProductionScroll, { passive: true });
         handleProductionScroll();
 
-        // ===== Values Carousel (horizontal scroll) =====
-        const valuesCarousel = document.getElementById('values-carousel');
+        // ===== Values Carousel (Scroll-Driven Horizontal) =====
+        const valuesSection = document.getElementById('values');
         const valuesTrack = document.getElementById('values-track');
+        const valuesMediaQuery = window.matchMedia('(min-width: 769px)');
 
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+        function handleValuesScroll() {
+            if (!valuesSection || !valuesTrack) return;
 
-        valuesCarousel.addEventListener('mousedown', (e) => {
-            isDown = true;
-            valuesCarousel.classList.add('values__carousel--grabbing');
-            startX = e.pageX - valuesCarousel.offsetLeft;
-            scrollLeft = valuesCarousel.scrollLeft;
-        });
+            const rect = valuesSection.getBoundingClientRect();
+            const sectionHeight = valuesSection.offsetHeight;
+            const viewportHeight = window.innerHeight;
+            let progress;
 
-        valuesCarousel.addEventListener('mouseleave', () => {
-            isDown = false;
-            valuesCarousel.classList.remove('values__carousel--grabbing');
-        });
+            if (valuesMediaQuery.matches) {
+                // Desktop: tall section (300vh) with sticky — use internal scroll
+                const scrolledIntoSection = -rect.top;
+                const scrollableRange = sectionHeight - viewportHeight;
+                if (scrollableRange <= 0) return;
+                progress = Math.max(0, Math.min(1, scrolledIntoSection / scrollableRange));
+            } else {
+                // Mobile: 100vh section — animate as section passes through viewport
+                // Start when section top hits viewport bottom, end when section bottom hits viewport top
+                const totalTravel = viewportHeight + sectionHeight;
+                const scrolled = viewportHeight - rect.top;
+                progress = Math.max(0, Math.min(1, scrolled / totalTravel));
+            }
 
-        valuesCarousel.addEventListener('mouseup', () => {
-            isDown = false;
-            valuesCarousel.classList.remove('values__carousel--grabbing');
-        });
+            // Calculate how far the track needs to move
+            const trackWidth = valuesTrack.scrollWidth;
+            const containerWidth = valuesSection.querySelector('.values__carousel').offsetWidth;
+            const maxTranslate = trackWidth - containerWidth;
 
-        valuesCarousel.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - valuesCarousel.offsetLeft;
-            const walk = (x - startX) * 2;
-            valuesCarousel.scrollLeft = scrollLeft - walk;
-        });
+            if (maxTranslate <= 0) return;
+
+            const translateX = -progress * maxTranslate;
+            valuesTrack.style.transform = `translateX(${translateX}px)`;
+        }
+
+        window.addEventListener('scroll', handleValuesScroll, { passive: true });
+        handleValuesScroll();
     </script>
 
 </body>

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/magazin.css" />
     <link rel="stylesheet" href="css/karzina.css" />
+    <link rel="stylesheet" href="css/cart-popup.css" />
 </head>
 
 <body>
@@ -30,7 +31,7 @@
             <a href="magazin.html" class="breadcrumbs__link">КАТАЛОГ</a>
             <span class="breadcrumbs__dot"></span>
             <span class="breadcrumbs__link">ТОВАР</span>
-            <span class="breadcrumbs__dot breadcrumbs__dot--dark"></span>
+            <span class="breadcrumbs__dot"></span>
             <span class="breadcrumbs__current breadcrumbs__current--dark">КОРЗИНА</span>
         </div>
 
@@ -145,6 +146,7 @@
                 <!-- Total -->
                 <div class="cart-page__total" id="cart-total">
                     <span class="cart-page__total-label">Итоговая сумма</span>
+                    <span class="cart-page__total-price">45 000₽</span>
                 </div>
             </div>
             <div class="cart_line"></div>
@@ -223,6 +225,15 @@
                         </div>
                     </div>
 
+                    <!-- Consent checkbox -->
+                    <label class="checkout-form__consent" id="checkout-consent-label">
+                        <input type="checkbox" name="consent" class="checkout-form__checkbox" id="checkout-consent"
+                            required>
+                        <span class="checkout-form__checkmark"></span>
+                        <span class="checkout-form__consent-text">Даю согласие на <a href="#"
+                                class="checkout-form__consent-link">обработку</a> своих персональных данных</span>
+                    </label>
+
                     <!-- Submit button -->
                     <button type="submit" class="checkout-form__submit" id="checkout-submit">
                         Оформить заказ
@@ -237,6 +248,7 @@
     <script src="js/footer-component.js"></script>
 
     <script src="js/header.js"></script>
+    <script src="js/cart-popup.js"></script>
     <script>
         // ===== QUANTITY CONTROLS =====
         document.querySelectorAll('.cart-item__qty-btn--plus').forEach(btn => {
@@ -282,7 +294,8 @@
             const name = document.getElementById('checkout-name').value;
             const phone = document.getElementById('checkout-phone').value;
             const email = document.getElementById('checkout-email').value;
-            if (name && phone && email) {
+            const consent = document.getElementById('checkout-consent').checked;
+            if (name && phone && email && consent) {
                 alert('Спасибо за заказ, ' + name + '! Мы свяжемся с вами по номеру +7' + phone);
                 checkoutForm.reset();
             }

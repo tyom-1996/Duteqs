@@ -32,83 +32,85 @@
 
     <!-- ===== CATALOG FILTERS ===== -->
     <div class="catalog-filters" id="catalog-filters">
-      <div class="catalog-filters__left">
-        <div class="catalog-filters__tabs" id="catalog-tabs">
-          <button class="catalog-filters__tab" data-filter="all" id="filter-all"
-            onclick="window.location.href = 'magazin.html'">
-            Все
-          </button>
-          <button class="catalog-filters__tab" data-filter="men" id="filter-men"
-            onclick="window.location.href = 'magazin_men.html'">
-            Мужчины
-          </button>
-          <button class="catalog-filters__tab" data-filter="women" id="filter-women"
-            onclick="window.location.href = 'magazin_women.html'">
-            Женщины
-          </button>
-          <button class="catalog-filters__tab catalog-filters__tab--active" data-filter="kids" id="filter-kids"
-            onclick="window.location.href = 'magazin_child.html'">
-            Дети
-          </button>
-          <button class="catalog-filters__tab" data-filter="looks" id="filter-looks"
-            onclick="window.location.href = 'obrazi.html'">
-            Образы
-          </button>
-        </div>
-        <div class="catalog-filters__subtabs" id="catalog-subtabs">
-          <button class="catalog-filters__subtab catalog-filters__subtab--active">
-            Все
-          </button>
-          <button class="catalog-filters__subtab">Для девочек</button>
-          <button class="catalog-filters__subtab">Для мальчиков</button>
-          <button class="catalog-filters__subtab">Пижамы</button>
-          <button class="catalog-filters__subtab">Носки</button>
-          <button class="catalog-filters__subtab">Футболки</button>
-          <button class="catalog-filters__subtab">Комплекты</button>
-        </div>
+      <div class="catalog-filters__tabs" id="catalog-tabs">
+        <button class="catalog-filters__tab" data-filter="all" id="filter-all"
+          onclick="window.location.href = 'magazin.html'">
+          Все
+        </button>
+        <button class="catalog-filters__tab" data-filter="men" id="filter-men"
+          onclick="window.location.href = 'magazin_men.html'">
+          Мужчины
+        </button>
+        <button class="catalog-filters__tab" data-filter="women" id="filter-women"
+          onclick="window.location.href = 'magazin_women.html'">
+          Женщины
+        </button>
+        <button class="catalog-filters__tab catalog-filters__tab--active" data-filter="kids" id="filter-kids"
+          onclick="window.location.href = 'magazin_child.html'">
+          Дети
+        </button>
+        <button class="catalog-filters__tab" data-filter="looks" id="filter-looks"
+          onclick="window.location.href = 'obrazi.html'">
+          Образы
+        </button>
       </div>
       <button class="catalog-filters__filter-btn" id="filter-btn">
         Фильтры (0)
       </button>
     </div>
 
-    <!-- ===== PRODUCT GRID ===== -->
     <section class="catalog-grid" id="catalog-grid">
       <!-- Row 1 -->
-      <div class="product-card" id="product-card-1">
-        <a href="magazin_single.html" class="product-card__link">
-          <div class="product-card__image-wrapper">
-            <img src="images/magazin_child_img1.webp" alt="Товар 1" class="product-card__image" />
+      <div class="look-card" id="look-card-1">
+        <a href="magazin_single.html" class="look-card__link">
+          <div class="look-card__image-wrapper">
+            <img src="images/magazin_child_img1.webp" alt="Товар 1" class="look-card__image" />
+            <div class="look-card__info">
+              <span class="look-card__name">Название</span>
+              <span class="look-card__price">00.00 Руб.</span>
+            </div>
           </div>
         </a>
         <button class="btn btn--solid-dark btn--full" id="cart-btn-1">
           В корзину
         </button>
       </div>
-      <div class="product-card" id="product-card-2">
-        <a href="magazin_single.html" class="product-card__link">
-          <div class="product-card__image-wrapper">
-            <img src="images/magazin_child_img2.webp" alt="Товар 2" class="product-card__image" />
+      <div class="look-card" id="look-card-2">
+        <a href="magazin_single.html" class="look-card__link">
+          <div class="look-card__image-wrapper">
+            <img src="images/magazin_child_img2.webp" alt="Товар 2" class="look-card__image" />
+            <div class="look-card__info">
+              <span class="look-card__name">Название</span>
+              <span class="look-card__price">00.00 Руб.</span>
+            </div>
           </div>
         </a>
         <button class="btn btn--solid-dark btn--full" id="cart-btn-2">
           В корзину
         </button>
       </div>
-      <div class="product-card" id="product-card-3">
-        <a href="magazin_single.html" class="product-card__link">
-          <div class="product-card__image-wrapper">
-            <img src="images/magazin_child_img3.webp" alt="Товар 3" class="product-card__image" />
+      <div class="look-card" id="look-card-3">
+        <a href="magazin_single.html" class="look-card__link">
+          <div class="look-card__image-wrapper">
+            <img src="images/magazin_child_img3.webp" alt="Товар 3" class="look-card__image" />
+            <div class="look-card__info">
+              <span class="look-card__name">Название</span>
+              <span class="look-card__price">00.00 Руб.</span>
+            </div>
           </div>
         </a>
         <button class="btn btn--solid-dark btn--full" id="cart-btn-3">
           В корзину
         </button>
       </div>
-      <div class="product-card" id="product-card-4">
-        <a href="magazin_single.html" class="product-card__link">
-          <div class="product-card__image-wrapper">
-            <img src="images/magazin_child_img4.webp" alt="Товар 4" class="product-card__image" />
+      <div class="look-card" id="look-card-4">
+        <a href="magazin_single.html" class="look-card__link">
+          <div class="look-card__image-wrapper">
+            <img src="images/magazin_child_img4.webp" alt="Товар 4" class="look-card__image" />
+            <div class="look-card__info">
+              <span class="look-card__name">Название</span>
+              <span class="look-card__price">00.00 Руб.</span>
+            </div>
           </div>
         </a>
         <button class="btn btn--solid-dark btn--full" id="cart-btn-4">
@@ -117,40 +119,56 @@
       </div>
 
       <!-- Row 2 -->
-      <div class="product-card" id="product-card-5">
-        <a href="magazin_single.html" class="product-card__link">
-          <div class="product-card__image-wrapper">
-            <img src="images/magazin_child_img5.webp" alt="Товар 5" class="product-card__image" />
+      <div class="look-card" id="look-card-5">
+        <a href="magazin_single.html" class="look-card__link">
+          <div class="look-card__image-wrapper">
+            <img src="images/magazin_child_img5.webp" alt="Товар 5" class="look-card__image" />
+            <div class="look-card__info">
+              <span class="look-card__name">Название</span>
+              <span class="look-card__price">00.00 Руб.</span>
+            </div>
           </div>
         </a>
         <button class="btn btn--solid-dark btn--full" id="cart-btn-5">
           В корзину
         </button>
       </div>
-      <div class="product-card" id="product-card-6">
-        <a href="magazin_single.html" class="product-card__link">
-          <div class="product-card__image-wrapper">
-            <img src="images/magazin_child_img6.webp" alt="Товар 6" class="product-card__image" />
+      <div class="look-card" id="look-card-6">
+        <a href="magazin_single.html" class="look-card__link">
+          <div class="look-card__image-wrapper">
+            <img src="images/magazin_child_img6.webp" alt="Товар 6" class="look-card__image" />
+            <div class="look-card__info">
+              <span class="look-card__name">Название</span>
+              <span class="look-card__price">00.00 Руб.</span>
+            </div>
           </div>
         </a>
         <button class="btn btn--solid-dark btn--full" id="cart-btn-6">
           В корзину
         </button>
       </div>
-      <div class="product-card" id="product-card-7">
-        <a href="magazin_single.html" class="product-card__link">
-          <div class="product-card__image-wrapper">
-            <img src="images/magazin_child_img7.webp" alt="Товар 7" class="product-card__image" />
+      <div class="look-card" id="look-card-7">
+        <a href="magazin_single.html" class="look-card__link">
+          <div class="look-card__image-wrapper">
+            <img src="images/magazin_child_img7.webp" alt="Товар 7" class="look-card__image" />
+            <div class="look-card__info">
+              <span class="look-card__name">Название</span>
+              <span class="look-card__price">00.00 Руб.</span>
+            </div>
           </div>
         </a>
         <button class="btn btn--solid-dark btn--full" id="cart-btn-7">
           В корзину
         </button>
       </div>
-      <div class="product-card" id="product-card-8">
-        <a href="magazin_single.html" class="product-card__link">
-          <div class="product-card__image-wrapper">
-            <img src="images/magazin_child_img8.webp" alt="Товар 8" class="product-card__image" />
+      <div class="look-card" id="look-card-8">
+        <a href="magazin_single.html" class="look-card__link">
+          <div class="look-card__image-wrapper">
+            <img src="images/magazin_child_img8.webp" alt="Товар 8" class="look-card__image" />
+            <div class="look-card__info">
+              <span class="look-card__name">Название</span>
+              <span class="look-card__price">00.00 Руб.</span>
+            </div>
           </div>
         </a>
         <button class="btn btn--solid-dark btn--full" id="cart-btn-8">
@@ -422,13 +440,13 @@
 
 
 
-    // Product card hover effect
-    document.querySelectorAll(".product-card").forEach((card) => {
+    // Look card hover effect
+    document.querySelectorAll(".look-card").forEach((card) => {
       card.addEventListener("mouseenter", () => {
-        card.classList.add("product-card--hover");
+        card.classList.add("look-card--hover");
       });
       card.addEventListener("mouseleave", () => {
-        card.classList.remove("product-card--hover");
+        card.classList.remove("look-card--hover");
       });
     });
   </script>

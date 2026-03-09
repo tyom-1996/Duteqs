@@ -119,20 +119,22 @@
             <div class="cart-popup-item__material">${item.material}</div>
             <div class="cart-popup-item__size">${item.size}</div>
           </div>
-          <div class="cart-popup-item__quantity">
-            <button class="cart-popup-item__qty-btn cart-popup-item__qty-btn--minus" data-cart-id="${item.id}" aria-label="Уменьшить">
-              <span class="cart-popup-qty-minus"></span>
-            </button>
-            <span class="cart-popup-item__qty-value">${item.qty}</span>
-            <button class="cart-popup-item__qty-btn cart-popup-item__qty-btn--plus" data-cart-id="${item.id}" aria-label="Увеличить">
-              <span class="cart-popup-qty-plus"></span>
-            </button>
-          </div>
-          <div class="cart-popup-item__price-group">
-            <span class="cart-popup-item__price">${item.price}</span>
-            <button class="cart-popup-item__remove" data-cart-id="${item.id}" aria-label="Удалить">
-              <span class="cart-popup-remove-icon"></span>
-            </button>
+          <div class="cart-popup-item__controls-row">
+            <div class="cart-popup-item__quantity">
+              <button class="cart-popup-item__qty-btn cart-popup-item__qty-btn--minus" data-cart-id="${item.id}" aria-label="Уменьшить">
+                <span class="cart-popup-qty-minus"></span>
+              </button>
+              <span class="cart-popup-item__qty-value">${item.qty}</span>
+              <button class="cart-popup-item__qty-btn cart-popup-item__qty-btn--plus" data-cart-id="${item.id}" aria-label="Увеличить">
+                <span class="cart-popup-qty-plus"></span>
+              </button>
+            </div>
+            <div class="cart-popup-item__price-group">
+              <span class="cart-popup-item__price">${item.price}</span>
+              <button class="cart-popup-item__remove" data-cart-id="${item.id}" aria-label="Удалить">
+                <span class="cart-popup-remove-icon"></span>
+              </button>
+            </div>
           </div>
         </div>`;
 
@@ -260,15 +262,15 @@
     function init() {
         injectCartPopup();
 
-        // Catalog pages: product-card buttons
-        document.querySelectorAll('.product-card .btn--solid-dark').forEach(btn => {
+        // Catalog pages: product-card and look-card buttons (exclude "Подробнее" links)
+        document.querySelectorAll('.product-card .btn--solid-dark:not(.btn--with-icon), .look-card .btn--solid-dark:not(.btn--with-icon):not(.look-card__btn)').forEach(btn => {
             // Remove existing click listeners by cloning
             const newBtn = btn.cloneNode(true);
             btn.parentNode.replaceChild(newBtn, btn);
 
             newBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                const card = newBtn.closest('.product-card');
+                const card = newBtn.closest('.product-card, .look-card');
                 if (card) {
                     addToCart(card, newBtn);
                 }

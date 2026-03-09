@@ -51,15 +51,12 @@
 
         <div class="footer__middle">
             <span class="footer__slogan">Детали, которые тебя раскрывают</span>
-            <div class="footer__legal-links">
                 <a href="#" class="footer__link">Политика конфиденциальности</a>
                 <a href="#" class="footer__link">Политика обработки персональных данных</a>
-            </div>
         </div>
 
         <div class="footer__bottom">
             <h2 class="footer__brand">Sergio Dallini</h2>
-            <img src="svg/footer-brand-mobile.svg" alt="Sergio Dallini" class="footer__brand-mobile">
         </div>
     </footer>`;
 

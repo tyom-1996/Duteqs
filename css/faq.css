@@ -44,14 +44,14 @@
    FAQ HERO — Large Title
    ====================================================== */
 .faq-hero {
-    padding: 100px var(--container-padding) 40px;
+    padding: 70px var(--container-padding) 40px;
     max-width: 1920px;
     margin: 0 auto;
 }
 
 .faq-hero__title {
     color: #0B0B0B;
-    font-size: clamp(120px, 14.3vw, 274px);
+    font-size: clamp(120px, 14.3vw, 200px);
     font-family: var(--font-heading);
     font-weight: 700;
     text-transform: uppercase;
@@ -86,7 +86,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 32px 0;
+    padding: 22px 0;
     background: none;
     border: none;
     cursor: pointer;
@@ -108,7 +108,7 @@
 
 .faq-item__number {
     color: #0B0B0B;
-    font-size: clamp(48px, 4.7vw, 90px);
+    font-size: clamp(48px, 4.7vw, 70px);
     font-family: var(--font-heading);
     font-weight: 400;
     text-transform: uppercase;
@@ -203,12 +203,11 @@
 /* Tablet Landscape */
 @media (max-width: 1024px) {
     .faq-hero {
-        padding-top: 90px;
         padding-bottom: 30px;
     }
 
     .faq-hero__title {
-        font-size: clamp(80px, 12vw, 160px);
+        font-size: clamp(60px, 12vw, 160px);
     }
 
     .faq-item__header {
@@ -220,7 +219,7 @@
     }
 
     .faq-item__number {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .faq-item__question {
@@ -261,12 +260,12 @@
     }
 
     .faq-hero {
-        padding-top: 80px;
+        padding-top: 60px;
         padding-bottom: 20px;
     }
 
     .faq-hero__title {
-        font-size: clamp(60px, 12vw, 120px);
+        font-size: clamp(50px, 12vw, 120px);
     }
 
     .faq-item__header {
@@ -316,12 +315,12 @@
 @media (max-width: 576px) {
 
     .faq-hero {
-        padding-top: 80px;
+        padding-top: 60px;
         padding-bottom: 16px;
     }
 
     .faq-hero__title {
-        font-size: 60px;
+        font-size: 50px;
         line-height: 72px;
         letter-spacing: 0;
     }
@@ -342,7 +341,7 @@
     }
 
     .faq-item__number {
-        font-size: 50px;
+        font-size: 40px;
         line-height: 45px;
     }
 
